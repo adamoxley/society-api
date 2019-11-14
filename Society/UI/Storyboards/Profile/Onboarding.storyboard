@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bME-Vt-jUd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5o9-Ra-T5t">
     <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -112,7 +112,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="csm-Bi-Kbo">
-                                <rect key="frame" x="47" y="517" width="226" height="26"/>
+                                <rect key="frame" x="47" y="468" width="226" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcU-Hi-od0">
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="26"/>
@@ -375,7 +375,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="HGg-rm-Rbq">
-                                <rect key="frame" x="47" y="517" width="226" height="26"/>
+                                <rect key="frame" x="47" y="468" width="226" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPv-Rr-1IT">
                                         <rect key="frame" x="0.0" y="0.0" width="123.5" height="26"/>
@@ -435,12 +435,17 @@
         <scene sceneID="3Ud-qf-Kch">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5o9-Ra-T5t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="25j-sZ-GAH"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WmT-ye-qcX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GRp-Lp-9C1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="KnM-02-pYL" kind="relationship" relationship="rootViewController" id="ZZh-kG-LdX"/>
                     </connections>
@@ -523,7 +528,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkb-Ou-v1c" userLabel="Button" customClass="SocietyRoundedButton" customModule="Society" customModuleProvider="target">
-                                <rect key="frame" x="67" y="488" width="186" height="40"/>
+                                <rect key="frame" x="67" y="439" width="186" height="40"/>
                                 <color key="backgroundColor" name="society-danger-button-color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="p0J-sr-re9"/>
@@ -590,17 +595,17 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afP-s5-Icp" userLabel="Photo Controls View">
-                                <rect key="frame" x="0.0" y="284" width="320" height="36"/>
+                                <rect key="frame" x="0.0" y="262" width="320" height="58"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipD-Df-sNt">
-                                        <rect key="frame" x="15" y="7" width="22" height="22"/>
+                                        <rect key="frame" x="15" y="7" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ipD-Df-sNt" secondAttribute="height" multiplier="1:1" id="l1u-ic-NeJ"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="camera-flash-icon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YP4-MX-Gdh">
-                                        <rect key="frame" x="283" y="7" width="22" height="22"/>
+                                        <rect key="frame" x="261" y="7" width="44" height="44"/>
                                         <state key="normal" backgroundImage="camera-flip-icon"/>
                                         <connections>
                                             <action selector="cameraFlipButtonPressed:" destination="bME-Vt-jUd" eventType="touchUpInside" id="LU8-Xv-20N"/>
@@ -619,10 +624,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKn-p3-El9">
-                                <rect key="frame" x="0.0" y="320" width="320" height="168"/>
+                                <rect key="frame" x="0.0" y="320" width="320" height="119"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yZh-fY-mnW">
-                                        <rect key="frame" x="120" y="23" width="80" height="80"/>
+                                        <rect key="frame" x="120" y="4.5" width="80" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRl-zo-Qji">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -645,7 +650,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geS-G1-2SP" userLabel="Button" customClass="SocietyRoundedButton" customModule="Society" customModuleProvider="target">
-                                <rect key="frame" x="67" y="488" width="186" height="40"/>
+                                <rect key="frame" x="67" y="439" width="186" height="40"/>
                                 <color key="backgroundColor" name="society-danger-button-color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JfF-X4-xu0"/>
@@ -830,7 +835,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fa1-Wy-Jya">
-                                <rect key="frame" x="47" y="223" width="226" height="245"/>
+                                <rect key="frame" x="47" y="223" width="226" height="196"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fJ6-fF-soE">
                                     <size key="itemSize" width="50" height="50"/>
@@ -850,7 +855,7 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="agt-3l-B0d">
-                                <rect key="frame" x="67" y="488" width="186" height="40"/>
+                                <rect key="frame" x="67" y="439" width="186" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc6-9u-PWw" userLabel="Button" customClass="SocietyRoundedButton" customModule="Society" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="40"/>
@@ -936,11 +941,11 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R3n-5D-z8e">
-                                <rect key="frame" x="0.0" y="223" width="320" height="245"/>
+                                <rect key="frame" x="0.0" y="223" width="320" height="196"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="02B-AS-9Cb">
-                                <rect key="frame" x="67" y="488" width="186" height="40"/>
+                                <rect key="frame" x="67" y="439" width="186" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opa-xv-Tb1" userLabel="Button" customClass="SocietyRoundedButton" customModule="Society" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="40"/>
@@ -1026,7 +1031,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LpW-2I-flj">
-                                <rect key="frame" x="67" y="488" width="186" height="40"/>
+                                <rect key="frame" x="67" y="439" width="186" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUI-1n-YPE" userLabel="Button" customClass="SocietyRoundedButton" customModule="Society" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="40"/>
@@ -1192,6 +1197,7 @@
         <image name="camera-flash-icon" width="16" height="20"/>
         <image name="camera-flip-icon" width="22" height="22"/>
         <image name="camera-icon" width="121" height="120"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="society-world" width="281" height="292"/>
         <image name="society_logo" width="81" height="27"/>
         <namedColor name="society-background-color">
