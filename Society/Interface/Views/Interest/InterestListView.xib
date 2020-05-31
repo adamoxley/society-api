@@ -7,9 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiscoverViewController" customModule="Society" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterestListViewController" customModule="Society" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="rnE-SC-msC" id="PjZ-dO-cGj"/>
+                <outlet property="activityIndicator" destination="eeZ-bT-Fkq" id="rVY-9P-BHi"/>
+                <outlet property="collectionView" destination="Qyo-fg-OiO" id="H3v-aV-ZW4"/>
+                <outlet property="failureButton" destination="OXD-KK-X4O" id="oK4-SN-ZAN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,34 +20,60 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rnE-SC-msC">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Qyo-fg-OiO">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H5E-UD-YEb">
-                        <size key="itemSize" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WBJ-W2-oNA">
+                        <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-w6-13H">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="eeZ-bT-Fkq">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OXD-KK-X4O">
+                    <rect key="frame" x="63" y="433.5" width="288" height="29"/>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Unable to load interests right now. ">
+                                <attributes>
+                                    <color key="NSColor" name="secondaryGrey"/>
+                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content="Try again.">
+                                <attributes>
+                                    <color key="NSColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="failureButtonTapped:" destination="-1" eventType="touchUpInside" id="XuR-8O-81G"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="rnE-SC-msC" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ISn-P2-GwO"/>
-                <constraint firstItem="aTZ-w6-13H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LUB-6b-7lL"/>
-                <constraint firstItem="rnE-SC-msC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bLP-GF-dLc"/>
-                <constraint firstItem="rnE-SC-msC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="diQ-IG-03G"/>
-                <constraint firstItem="aTZ-w6-13H" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kOW-00-pis"/>
-                <constraint firstItem="rnE-SC-msC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sIs-Rx-R7E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Qyo-fg-OiO" secondAttribute="bottom" id="8mB-Qx-i5L"/>
+                <constraint firstItem="OXD-KK-X4O" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ASe-2a-PJK"/>
+                <constraint firstItem="eeZ-bT-Fkq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="BQN-RB-OOP"/>
+                <constraint firstItem="eeZ-bT-Fkq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IC3-T9-5Ho"/>
+                <constraint firstItem="OXD-KK-X4O" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="P2P-IT-URp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qyo-fg-OiO" secondAttribute="trailing" id="W4Z-j6-Jz0"/>
+                <constraint firstItem="Qyo-fg-OiO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZTP-9U-Ozu"/>
+                <constraint firstItem="Qyo-fg-OiO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZZn-8f-X3V"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="secondaryGrey">
+            <color red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

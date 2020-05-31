@@ -18,10 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarViewController = UITabBarController()
-
-        let service = InterestNetwork()
-        let viewModel = InterestListViewModel(with: service)
-        let dashboardViewController = InterestListViewController(viewModel: viewModel)
+        
+        let dashboardViewController = InterestOnboardingViewController()
         
         let dashboardTabItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 0)
         dashboardViewController.tabBarItem = dashboardTabItem

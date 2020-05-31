@@ -9,6 +9,12 @@
 import Foundation
 import Combine
 
+enum InterestViewModelState {
+    case loading
+    case complete
+    case error(HTTPError)
+}
+
 class InterestListViewModel {
     
     typealias ViewModel = InterestViewModel
@@ -16,10 +22,11 @@ class InterestListViewModel {
     
     // Service properties
     var service: Service
-    private var cancellable = [AnyCancellable]()
+    private var cancellable = Set<AnyCancellable>()
     
     // Data properties
-    @Published var dataSource: [InterestViewModel] = []
+    @Published private(set) var dataSource: [InterestViewModel] = []
+    @Published private(set) var state: InterestViewModelState = .loading
     
     required init(with service: Service) {
         self.service = service
@@ -36,13 +43,15 @@ class InterestListViewModel {
                 guard let self = self else { return }
                 
                 switch value {
-                case .failure:
+                case .failure(let error):
                     self.dataSource = []
+                    self.state = .error(error)
                 case .finished:
-                    break
+                    self.state = .complete
                 }
             }, receiveValue: { [weak self] interest in
                 guard let self = self else { return }
+                
                 self.dataSource = interest
             })
             .store(in: &cancellable)

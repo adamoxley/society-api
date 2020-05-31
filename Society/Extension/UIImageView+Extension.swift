@@ -10,11 +10,6 @@ import UIKit
 
 extension UIImageView {
     
-    func rounded(by radius: CGFloat = 10) {
-        layer.cornerRadius = radius
-        clipsToBounds = true
-    }
-    
     public func loadImage(at url: URL) {
         return
     }

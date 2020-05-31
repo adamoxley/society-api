@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,20 +20,34 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QFZ-o5-4yL">
                         <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                     </imageView>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qh-ml-vsq">
+                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                        <color key="backgroundColor" name="black20"/>
+                    </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="2qh-ml-vsq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1zq-9S-p95"/>
+                <constraint firstAttribute="trailing" secondItem="2qh-ml-vsq" secondAttribute="trailing" id="3EG-Mp-PzR"/>
+                <constraint firstAttribute="bottom" secondItem="2qh-ml-vsq" secondAttribute="bottom" id="K64-Oi-q5P"/>
                 <constraint firstItem="QFZ-o5-4yL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SNy-VK-f7a"/>
                 <constraint firstItem="QFZ-o5-4yL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bAK-i1-BWi"/>
                 <constraint firstAttribute="bottom" secondItem="QFZ-o5-4yL" secondAttribute="bottom" id="c3m-RK-sUv"/>
                 <constraint firstAttribute="trailing" secondItem="QFZ-o5-4yL" secondAttribute="trailing" id="ri3-5o-Fsb"/>
+                <constraint firstItem="2qh-ml-vsq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="s9Y-i3-COd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="84" height="75"/>
             <connections>
                 <outlet property="imageView" destination="QFZ-o5-4yL" id="6dy-ef-McU"/>
+                <outlet property="overlayView" destination="2qh-ml-vsq" id="fwe-R5-Yrx"/>
             </connections>
             <point key="canvasLocation" x="162.31884057971016" y="143.30357142857142"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="black20">
+            <color red="0.13699999451637268" green="0.13699999451637268" blue="0.14900000393390656" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -44,8 +44,7 @@ struct APIService: NetworkServicable {
             
             return try decoder.decode(T.self, from: result.data)
         }
-        .mapError {
-            $0 as? HTTPError ?? .unknown }
+        .mapError { $0 as? HTTPError ?? .unknown }
         .eraseToAnyPublisher()
     }
 }

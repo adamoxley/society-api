@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterestOnboardingViewController" customModule="Society" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="mqr-Nq-dj0" id="Vul-Pe-WcJ"/>
+                <outlet property="proceedButton" destination="Qe2-y3-z8N" id="2k3-Sl-hS0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fzL-qJ-59o"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqr-Nq-dj0">
+                    <rect key="frame" x="45" y="232" width="324" height="488"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-y3-z8N">
+                    <rect key="frame" x="45" y="760" width="324" height="42"/>
+                    <color key="backgroundColor" name="action"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="a2f-np-tX6"/>
+                    </constraints>
+                    <state key="normal" title="Proceed">
+                        <color key="titleColor" name="white"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mqr-Nq-dj0" secondAttribute="trailing" constant="45" id="K3O-KU-gW8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Qe2-y3-z8N" secondAttribute="bottom" constant="60" id="Qed-27-qqC"/>
+                <constraint firstItem="Qe2-y3-z8N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="45" id="VUk-oa-WCF"/>
+                <constraint firstItem="Qe2-y3-z8N" firstAttribute="top" secondItem="mqr-Nq-dj0" secondAttribute="bottom" constant="40" id="bNh-fk-nA1"/>
+                <constraint firstItem="mqr-Nq-dj0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="45" id="seK-nh-Th0"/>
+                <constraint firstItem="mqr-Nq-dj0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="188" id="vMZ-CP-aFz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qe2-y3-z8N" secondAttribute="trailing" constant="45" id="z7x-1M-ugK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="action">
+            <color red="0.098039215686274508" green="0.47058823529411764" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

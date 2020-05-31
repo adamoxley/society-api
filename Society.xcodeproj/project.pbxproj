@@ -22,6 +22,9 @@
 		66178F58232569D000FA09B2 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66178F56232569D000FA09B2 /* InterestCollectionViewCell.swift */; };
 		66178F59232569D000FA09B2 /* InterestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */; };
 		66276220247F1F4300AC5BAA /* InterestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */; };
+		667040722483361A0002AED1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667040712483361A0002AED1 /* UIView+Extension.swift */; };
+		66704075248337F90002AED1 /* InterestOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66704074248337F90002AED1 /* InterestOnboardingViewController.swift */; };
+		66704077248338490002AED1 /* InterestOnboardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66704076248338490002AED1 /* InterestOnboardingView.xib */; };
 		66731ED323FF3BBD002F1B21 /* InterestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66731ED123FF3BBD002F1B21 /* InterestListViewController.swift */; };
 		66731ED423FF3BBD002F1B21 /* InterestListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66731ED223FF3BBD002F1B21 /* InterestListView.xib */; };
 		66731ED623FF3F49002F1B21 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66731ED523FF3F49002F1B21 /* UIColor+Extension.swift */; };
@@ -96,6 +99,9 @@
 		66178F56232569D000FA09B2 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestCollectionViewCell.xib; sourceTree = "<group>"; };
 		6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListViewModel.swift; sourceTree = "<group>"; };
+		667040712483361A0002AED1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		66704074248337F90002AED1 /* InterestOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestOnboardingViewController.swift; sourceTree = "<group>"; };
+		66704076248338490002AED1 /* InterestOnboardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestOnboardingView.xib; sourceTree = "<group>"; };
 		66731ED123FF3BBD002F1B21 /* InterestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListViewController.swift; sourceTree = "<group>"; };
 		66731ED223FF3BBD002F1B21 /* InterestListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestListView.xib; sourceTree = "<group>"; };
 		66731ED523FF3F49002F1B21 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 				66CED74F240490CF00EFEF8F /* UICollectionView+Extension.swift */,
 				66CED7512404939C00EFEF8F /* NSObject+Extension.swift */,
 				6698CC8224049EE700A9CF6D /* UIImageView+Extension.swift */,
+				667040712483361A0002AED1 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -214,7 +221,6 @@
 		52E8BADD22E4BA0100DD1530 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				66F5707A247B20010024304E /* Test Data */,
 				52F184E322DA4C0A003AB57B /* Society.entitlements */,
 				52F184BC22DA4BE2003AB57B /* Assets.xcassets */,
 				52F184C122DA4BE2003AB57B /* Info.plist */,
@@ -300,6 +306,7 @@
 		66178F482325678000FA09B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				66704073248337D30002AED1 /* Onboarding */,
 				66A1041D2481C60300AE9351 /* Interest */,
 				66EB5A8F236E3D0F0030EBE2 /* Discover */,
 			);
@@ -313,6 +320,15 @@
 				6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */,
 			);
 			path = "Interest ViewModel";
+			sourceTree = "<group>";
+		};
+		66704073248337D30002AED1 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				66704074248337F90002AED1 /* InterestOnboardingViewController.swift */,
+				66704076248338490002AED1 /* InterestOnboardingView.xib */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		66809F9D2481D59200506578 /* Responses */ = {
@@ -450,13 +466,6 @@
 			path = "Extended Elements";
 			sourceTree = "<group>";
 		};
-		66F5707A247B20010024304E /* Test Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Test Data";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,6 +482,8 @@
 			dependencies = (
 			);
 			name = Society;
+			packageProductDependencies = (
+			);
 			productName = Society;
 			productReference = 52F184AD22DA4BE1003AB57B /* Society.app */;
 			productType = "com.apple.product-type.application";
@@ -545,6 +556,8 @@
 				Base,
 			);
 			mainGroup = 52F184A422DA4BE0003AB57B;
+			packageReferences = (
+			);
 			productRefGroup = 52F184AE22DA4BE1003AB57B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -563,6 +576,7 @@
 			files = (
 				66178F59232569D000FA09B2 /* InterestCollectionViewCell.xib in Resources */,
 				66731ED423FF3BBD002F1B21 /* InterestListView.xib in Resources */,
+				66704077248338490002AED1 /* InterestOnboardingView.xib in Resources */,
 				660BE0BC22EE5529006F61B6 /* LaunchScreen.storyboard in Resources */,
 				6698CC872405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib in Resources */,
 				52F184BD22DA4BE2003AB57B /* Assets.xcassets in Resources */,
@@ -615,8 +629,10 @@
 				6698CC912409B50900A9CF6D /* ParameterEncoder.swift in Sources */,
 				66731ED623FF3F49002F1B21 /* UIColor+Extension.swift in Sources */,
 				52DF89F522DAA48C00F251E1 /* UIViewController+Extention.swift in Sources */,
+				66704075248337F90002AED1 /* InterestOnboardingViewController.swift in Sources */,
 				66B05148240AAFBE002E30E7 /* NetworkServicable.swift in Sources */,
 				66809FA72481D8A700506578 /* InterestNetworkable.swift in Sources */,
+				667040722483361A0002AED1 /* UIView+Extension.swift in Sources */,
 				66CED74A24048D5300EFEF8F /* InterestViewModel.swift in Sources */,
 				6698CC862405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift in Sources */,
 				6698CC8324049EE700A9CF6D /* UIImageView+Extension.swift in Sources */,

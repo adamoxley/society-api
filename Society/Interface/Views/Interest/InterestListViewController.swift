@@ -12,52 +12,86 @@ import Combine
 class InterestListViewController: UIViewController {
     
     private var viewModel: InterestListViewModel
-    private var cancellable = [AnyCancellable]()
+    private var cancellables = Set<AnyCancellable>()
+    
+    @Published private(set) var selectedInterestItems: [InterestViewModel] = []
 
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var failureButton: UIButton!
+    
+    @IBAction func failureButtonTapped(_ sender: UIButton) {
+        viewModel.fetch()
+    }
+    
     init(viewModel: InterestListViewModel) {
         self.viewModel = viewModel
-
         super.init(nibName: nil, bundle: nil)
-        
-        view.addSubview(collectionView)
-        
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
-            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0)
-        ])
-        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.collectionViewLayout = .init()
         collectionView.register(InterestCollectionViewCell.self)
+        collectionView.allowsMultipleSelection = true
         collectionView.delegate = self
         collectionView.dataSource = self
 
         viewModel.fetch()
         
-        viewModel.$dataSource.sink() { _ in
-            self.collectionView.reloadData()
-        }.store(in: &cancellable)
-    }
+        viewModel.$dataSource
+            .receive(on: RunLoop.main)
+            .sink() { _ in
+                self.collectionView.reloadData()
+            }
+            .store(in: &cancellables)
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        viewModel.$state
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: stateValueHandler)
+            .store(in: &cancellables)
+    }
+    
+    private func stateValueHandler(_ state: InterestViewModelState) -> Void {
+        switch state {
+        case .loading:
+            failureButton.isHidden = true
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+        case .complete:
+            failureButton.isHidden = true
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
+        case .error:
+            failureButton.isHidden = false
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
+        }
     }
 }
 
 extension InterestListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("tapped item at indexPath \(indexPath)")
+        if let cell = collectionView.cellForItem(at: indexPath) as? InterestCollectionViewCell {
+            cell.setSelectedState()
+        }
+        
+        selectedInterestItems.append(viewModel.dataSource[indexPath.row])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? InterestCollectionViewCell {
+            cell.setSelectedState()
+        }
+        
+        let item = viewModel.dataSource[indexPath.row]
+        guard let index = selectedInterestItems.firstIndex(of: item) else { return }
+        selectedInterestItems.remove(at: index)
     }
 }
 
