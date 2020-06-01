@@ -31,6 +31,9 @@ class InterestOnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Step 1 of 5"
+        
+        containerView.isHidden = true
         proceedButton.rounded(by: 5)
         
         setupInterestView()
@@ -40,14 +43,31 @@ class InterestOnboardingViewController: UIViewController {
         let service = InterestNetwork()
         let viewModel = InterestListViewModel(with: service)
         interestListViewController = InterestListViewController(viewModel: viewModel)
-
+        
         if let viewController = interestListViewController {
-            add(viewController, frame: containerView.frame)
-            
+            add(viewController, container: containerView)
+
             viewController.$selectedInterestItems
                 .map({ $0.count >= 3 })
                 .assign(to: \.isEnabled, on: proceedButton)
                 .store(in: &cancellables)
+            
+            viewController.$renderedState
+                .receive(on: RunLoop.main)
+                .sink(receiveValue: stateValueHandler)
+                .store(in: &cancellables)
+        }
+    }
+    
+    private func stateValueHandler(_ state: InterestListViewControllerRenderedState) -> Void {
+        switch state {
+        case .pending:
+            proceedButton.isEnabled = false
+        case .rendered:
+            containerView.setHiddenState(false)
+            proceedButton.setHiddenState(false)
+        case .failure:
+            proceedButton.isHidden = true
         }
     }
 }

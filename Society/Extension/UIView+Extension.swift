@@ -14,4 +14,10 @@ extension UIView {
         layer.cornerRadius = radius
         clipsToBounds = true
     }
+    
+    func setHiddenState(_ hidden: Bool) {
+        Self.transition(with: self, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            self.isHidden = hidden
+        })
+    }
 }

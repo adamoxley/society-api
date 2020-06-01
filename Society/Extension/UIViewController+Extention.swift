@@ -33,6 +33,13 @@ extension UIViewController {
         child.didMove(toParent: self)
     }
     
+    func add(_ child: UIViewController, container: UIView) {
+        addChild(child)
+        child.view.frame = container.bounds
+        container.addSubview(child.view)
+        child.didMove(toParent: self)
+    }
+    
     func remove() {
         willMove(toParent: nil)
         view.removeFromSuperview()

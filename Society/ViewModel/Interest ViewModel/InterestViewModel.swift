@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit.UIImage
+import Kingfisher
 
 struct InterestViewModel: ViewModel {
     
@@ -23,8 +23,12 @@ struct InterestViewModel: ViewModel {
         return item.name
     }
     
-    var image: UIImage? {
-        return UIImage(named: "iPad")
+    var imageURL: URL {
+        guard let imageURL = item.imageURL else {
+            return URL(fileReferenceLiteralResourceName: "iPad")
+        }
+        
+        return imageURL
     }
     
     init(item: Model) {

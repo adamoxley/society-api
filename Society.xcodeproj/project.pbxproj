@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52064D492484607500DC43D5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52064D482484607500DC43D5 /* Kingfisher */; };
 		52DF89F522DAA48C00F251E1 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF89F322DAA48C00F251E1 /* UIViewController+Extention.swift */; };
 		52DF89F622DAA48C00F251E1 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF89F422DAA48C00F251E1 /* String+Extention.swift */; };
 		52F184B122DA4BE1003AB57B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F184B022DA4BE1003AB57B /* AppDelegate.swift */; };
@@ -141,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52064D492484607500DC43D5 /* Kingfisher in Frameworks */,
 				52F184E822DA4C46003AB57B /* PassKit.framework in Frameworks */,
 				52F184E622DA4C1D003AB57B /* AuthenticationServices.framework in Frameworks */,
 			);
@@ -483,6 +485,7 @@
 			);
 			name = Society;
 			packageProductDependencies = (
+				52064D482484607500DC43D5 /* Kingfisher */,
 			);
 			productName = Society;
 			productReference = 52F184AD22DA4BE1003AB57B /* Society.app */;
@@ -557,6 +560,7 @@
 			);
 			mainGroup = 52F184A422DA4BE0003AB57B;
 			packageReferences = (
+				52064D472484607500DC43D5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 52F184AE22DA4BE1003AB57B /* Products */;
 			projectDirPath = "";
@@ -1086,6 +1090,25 @@
 			defaultConfigurationName = Production;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52064D472484607500DC43D5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52064D482484607500DC43D5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52064D472484607500DC43D5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		52F184B922DA4BE1003AB57B /* Society.xcdatamodeld */ = {

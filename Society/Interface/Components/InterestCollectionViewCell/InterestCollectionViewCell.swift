@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class InterestCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
 
@@ -17,6 +18,7 @@ class InterestCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
                 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var overlayView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +31,9 @@ class InterestCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
     
     func configure(with viewModel: ViewModel) {
         self.viewModel = viewModel
-        imageView.image = UIImage(named: "iPad")
+        
+        titleLabel.text = viewModel.name
+        imageView.kf.setImage(with: viewModel.imageURL, options: [.transition(.fade(0.3))])
     }
     
     func setSelectedState() {

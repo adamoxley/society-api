@@ -9,12 +9,19 @@
 import UIKit
 import Combine
 
+enum InterestListViewControllerRenderedState {
+    case pending
+    case rendered
+    case failure
+}
+
 class InterestListViewController: UIViewController {
     
     private var viewModel: InterestListViewModel
     private var cancellables = Set<AnyCancellable>()
     
     @Published private(set) var selectedInterestItems: [InterestViewModel] = []
+    @Published private(set) var renderedState: InterestListViewControllerRenderedState = .pending
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -66,10 +73,12 @@ class InterestListViewController: UIViewController {
             failureButton.isHidden = true
             activityIndicator.isHidden = true
             activityIndicator.stopAnimating()
+            renderedState = .rendered
         case .error:
             failureButton.isHidden = false
             activityIndicator.isHidden = true
             activityIndicator.stopAnimating()
+            renderedState = .failure
         }
     }
 }
@@ -96,13 +105,39 @@ extension InterestListViewController: UICollectionViewDelegate {
 }
 
 extension InterestListViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.dataSource.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         return collectionView.dequeue(InterestCollectionViewCell.self,
                                       configureFrom: viewModel.dataSource[indexPath.item],
                                       at: indexPath)
+    }
+}
+
+extension InterestListViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewWidth = collectionView.bounds.width
+        return CGSize(width: collectionViewWidth / 3, height: collectionViewWidth / 3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
 }

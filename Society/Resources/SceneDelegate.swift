@@ -17,23 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { fatalError() }
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        let tabBarViewController = UITabBarController()
         
         let dashboardViewController = InterestOnboardingViewController()
+        let navigationController = UINavigationController(rootViewController: dashboardViewController)
         
-        let dashboardTabItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 0)
-        dashboardViewController.tabBarItem = dashboardTabItem
-
-        let viewControllerList = [dashboardViewController].map {
-            UINavigationController(rootViewController: $0)
-        }
-
-        tabBarViewController.viewControllers = viewControllerList
-        tabBarViewController.tabBar.barTintColor = UIColor.asset(.tiercharyGrey)
-        tabBarViewController.tabBar.tintColor = UIColor.asset(.action)
-        tabBarViewController.tabBar.isTranslucent = false
-
-        window?.rootViewController = tabBarViewController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
     }
