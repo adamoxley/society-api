@@ -9,6 +9,7 @@
 import Foundation
 
 protocol EndPointType {
+    
     var baseURL: URL { get }
     var path: HTTPEndpoint { get }
     var method: HTTPMethod { get }
@@ -16,6 +17,7 @@ protocol EndPointType {
 }
 
 extension EndPointType {
+    
     var baseURL: URL {
         return URLStore.APIURL
     }

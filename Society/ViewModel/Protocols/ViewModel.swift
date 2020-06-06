@@ -10,5 +10,9 @@ import Foundation
 
 protocol ViewModel {
     
-    associatedtype Model
+    associatedtype Model: Codable
+    
+    var item: Model { get }
+    
+    init(item: Model)
 }

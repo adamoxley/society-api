@@ -1,15 +1,15 @@
 //
-//  InterestNetwork.swift
+//  SocietyNetwork.swift
 //  Society
 //
-//  Created by Adam Oxley on 30/05/2020.
+//  Created by Adam Oxley on 03/06/2020.
 //  Copyright © 2020 Adam Oxley. All rights reserved.
 //
 
 import Foundation
 import Combine
 
-class InterestNetwork {
+class SocietyNetwork {
     
     private let networkService: NetworkServicable
     
@@ -18,13 +18,13 @@ class InterestNetwork {
     }
 }
 
-extension InterestNetwork: Listable {
- 
-    typealias ListResponse = InterestListResponse
+extension SocietyNetwork: Listable {
+    
+    typealias ListResponse = SocietyListResponse
     typealias ErrorType = HTTPError
     
     func list() -> AnyPublisher<ListResponse, ErrorType> {
-        let endpoint = InterestListEndpoint()
+        let endpoint = SocietyListEndpoint()
         return networkService.fetch(endpoint: endpoint)
     }
 }

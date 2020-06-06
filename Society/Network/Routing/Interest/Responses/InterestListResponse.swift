@@ -8,6 +8,9 @@
 
 import Foundation
 
-struct InterestListResponse: Codable {
-    let data: [Interest]
+struct InterestListResponse: ListableResponse {
+    
+    typealias Model = Interest
+    
+    var data: [Model]
 }

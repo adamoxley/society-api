@@ -1,21 +1,21 @@
 //
-//  InterestOnboardingViewController.swift
+//  SocietyOnboardingViewController.swift
 //  Society
 //
-//  Created by Adam Oxley on 31/05/2020.
+//  Created by Adam Oxley on 03/06/2020.
 //  Copyright © 2020 Adam Oxley. All rights reserved.
 //
 
 import UIKit
 import Combine
 
-class InterestOnboardingViewController: UIViewController {
+class SocietyOnboardingViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var proceedButton: UIButton!
     
     // MARK: - Children Containers
-    private var interestListViewController: InterestListViewController?
+    private var societyListViewController: SocietyListViewController?
     
     // MARK: - Properties
     private var cancellables = Set<AnyCancellable>()
@@ -33,18 +33,18 @@ class InterestOnboardingViewController: UIViewController {
         
         title = "Step 1 of 5"
         
-        containerView.isHidden = true
+        containerView.isHidden = false
         proceedButton.rounded(by: 5)
         
         setupInterestView()
     }
     
     private func setupInterestView() {
-        let service = InterestNetwork()
-        let viewModel = InterestListViewModel(with: service)
-        interestListViewController = InterestListViewController(viewModel: viewModel)
+        let service = SocietyNetwork()
+        let viewModel = SocietyListViewModel(with: service)
+        societyListViewController = SocietyListViewController(viewModel: viewModel)
         
-        if let viewController = interestListViewController {
+        if let viewController = societyListViewController {
             add(viewController, container: containerView)
 
             viewController.$selectedInterestItems
@@ -59,7 +59,7 @@ class InterestOnboardingViewController: UIViewController {
         }
     }
     
-    private func stateValueHandler(_ state: InterestListViewControllerRenderedState) -> Void {
+    private func stateValueHandler(_ state: ViewControllerRenderedState) -> Void {
         switch state {
         case .pending:
             proceedButton.isEnabled = false
@@ -67,7 +67,8 @@ class InterestOnboardingViewController: UIViewController {
             containerView.setHiddenState(false)
             proceedButton.setHiddenState(false)
         case .failure:
-            proceedButton.isHidden = true
+            containerView.setHiddenState(false)
+            proceedButton.setHiddenState(true)
         }
     }
 }

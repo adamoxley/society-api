@@ -1,19 +1,19 @@
 //
-//  InterestListViewModel.swift
+//  SocietyListViewModel.swift
 //  Society
 //
-//  Created by Adam Oxley on 27/05/2020.
+//  Created by Adam Oxley on 03/06/2020.
 //  Copyright © 2020 Adam Oxley. All rights reserved.
 //
 
 import Foundation
 import Combine
 
-class InterestListViewModel: ViewModelListable {
-
-    typealias ViewModelType = InterestViewModel
+class SocietyListViewModel: ViewModelListable {
+    
+    typealias ViewModelType = SocietyViewModel
     typealias ErrorType = HTTPError
-    typealias Service = InterestNetwork
+    typealias Service = SocietyNetwork
     
     var service: Service
     var cancellable: Set<AnyCancellable>
@@ -29,7 +29,7 @@ class InterestListViewModel: ViewModelListable {
     func list() {
         service.list()
         .map { response in
-                response.data.map(ViewModelType.init)
+            response.data.map(ViewModelType.init)
         }
         .map(Array.removeDuplicates)
         .receive(on: DispatchQueue.main)

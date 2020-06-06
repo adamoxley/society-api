@@ -42,9 +42,16 @@ struct APIService: NetworkServicable {
                 throw HTTPError.notFound
             }
             
+            guard (200...299).contains(httpResponse.statusCode) else {
+                throw HTTPError.badRequest
+            }
+            
             return try decoder.decode(T.self, from: result.data)
         }
-        .mapError { $0 as? HTTPError ?? .unknown }
+        .mapError {
+            print($0)
+            return $0 as? HTTPError ?? .unknown
+        }
         .eraseToAnyPublisher()
     }
 }

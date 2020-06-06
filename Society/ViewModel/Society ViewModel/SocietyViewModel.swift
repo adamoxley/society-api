@@ -1,18 +1,18 @@
 //
-//  InterestViewModel.swift
+//  SocietyViewModel.swift
 //  Society
 //
-//  Created by Adam Oxley on 24/02/2020.
+//  Created by Adam Oxley on 02/06/2020.
 //  Copyright © 2020 Adam Oxley. All rights reserved.
 //
 
 import Foundation
 
-struct InterestViewModel: ViewModel {
+struct SocietyViewModel: ViewModel {
     
-    typealias Model = Interest
+    typealias Model = Society
     
-    var item: Model
+    internal let item: Model
     
     var id: UUID {
         return item.id
@@ -20,6 +20,14 @@ struct InterestViewModel: ViewModel {
     
     var name: String {
         return item.name
+    }
+    
+    var memberCount: String {
+        return "\(item.memberCount) Members"
+    }
+    
+    var joinState: Society.JoinState {
+        return item.state
     }
     
     var imageURL: URL {
@@ -35,8 +43,8 @@ struct InterestViewModel: ViewModel {
     }
 }
 
-extension InterestViewModel: Hashable {
-    static func == (lhs: InterestViewModel, rhs: InterestViewModel) -> Bool {
+extension SocietyViewModel: Hashable {
+    static func == (lhs: SocietyViewModel, rhs: SocietyViewModel) -> Bool {
         return lhs.id == rhs.id
     }
     

@@ -1,5 +1,5 @@
 //
-//  InterestEndpoint.swift
+//  InterestListEndpoint.swift
 //  Society
 //
 //  Created by Adam Oxley on 29/02/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct InterestGetEndpoint: EndPointType {
+struct InterestListEndpoint: EndPointType {
     
     var path: HTTPEndpoint {
         return .interests
