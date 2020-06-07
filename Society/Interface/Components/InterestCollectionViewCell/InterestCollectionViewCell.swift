@@ -14,7 +14,18 @@ class InterestCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
     typealias ViewModel = InterestViewModel
 
     var viewModel: ViewModel?
-    private var selectedState: Bool = false
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                overlayView.layer.borderWidth = 3
+                overlayView.isHidden = false
+            } else {
+                overlayView.layer.borderWidth = 0
+                overlayView.isHidden = true
+            }
+        }
+    }
                 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var overlayView: UIView!
@@ -26,7 +37,9 @@ class InterestCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
         imageView.rounded(by: 15)
         overlayView.rounded(by: 15)
         overlayView.layer.masksToBounds = true
-        overlayView.layer.borderColor = UIColor.white.cgColor
+        overlayView.backgroundColor = UIColor.asset(.highlightState)
+        overlayView.layer.borderColor = UIColor.asset(.borderHighlightState).cgColor
+        imageView.kf.indicatorType = .activity
     }
     
     func configure(with viewModel: ViewModel) {
@@ -36,16 +49,11 @@ class InterestCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
         imageView.kf.setImage(with: viewModel.imageURL, options: [.transition(.fade(0.3))])
     }
     
-    func setSelectedState() {
-        selectedState.toggle()
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         
-        if selectedState {
-            overlayView.layer.borderWidth = 3
-            overlayView.isHidden = false
-        } else {
-            overlayView.layer.borderWidth = 0
-            overlayView.isHidden = true
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            overlayView.layer.borderColor = UIColor.asset(.borderHighlightState).cgColor
         }
-        
     }
 }

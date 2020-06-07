@@ -9,6 +9,7 @@
 import UIKit
 
 enum AssetColors: String {
+    // Core Colours
     case action
     case black10
     case black20
@@ -22,6 +23,12 @@ enum AssetColors: String {
     case secondaryGrey
     case tiercharyGrey
     case white
+    
+    // UI Elements
+    case borderHighlightState
+    case highlightState
+    case viewBackground
+    case cellBackground
 }
 
 extension UIColor {

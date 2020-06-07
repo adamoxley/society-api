@@ -31,7 +31,7 @@ class InterestOnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Step 1 of 5"
+        title = "Step 4 of 5"
         
         containerView.isHidden = true
         proceedButton.rounded(by: 5)

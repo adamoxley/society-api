@@ -82,7 +82,7 @@ extension InterestListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? InterestCollectionViewCell {
-            cell.setSelectedState()
+            cell.isSelected = true
         }
         
         selectedInterestItems.append(viewModel.dataSource[indexPath.row])
@@ -90,7 +90,7 @@ extension InterestListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? InterestCollectionViewCell {
-            cell.setSelectedState()
+            cell.isSelected = false
         }
         
         let item = viewModel.dataSource[indexPath.row]

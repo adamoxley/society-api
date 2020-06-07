@@ -31,7 +31,7 @@ class SocietyOnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Step 1 of 5"
+        title = "Step 5 of 5"
         
         containerView.isHidden = false
         proceedButton.rounded(by: 5)
@@ -46,11 +46,6 @@ class SocietyOnboardingViewController: UIViewController {
         
         if let viewController = societyListViewController {
             add(viewController, container: containerView)
-
-            viewController.$selectedInterestItems
-                .map({ $0.count >= 3 })
-                .assign(to: \.isEnabled, on: proceedButton)
-                .store(in: &cancellables)
             
             viewController.$renderedState
                 .receive(on: RunLoop.main)
@@ -62,7 +57,7 @@ class SocietyOnboardingViewController: UIViewController {
     private func stateValueHandler(_ state: ViewControllerRenderedState) -> Void {
         switch state {
         case .pending:
-            proceedButton.isEnabled = false
+            break
         case .rendered:
             containerView.setHiddenState(false)
             proceedButton.setHiddenState(false)

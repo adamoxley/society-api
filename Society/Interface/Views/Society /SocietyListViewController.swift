@@ -14,7 +14,6 @@ class SocietyListViewController: UIViewController {
     private var viewModel: SocietyListViewModel
     private var cancellables = Set<AnyCancellable>()
     
-    @Published private(set) var selectedInterestItems: [SocietyListViewModel] = []
     @Published private(set) var renderedState: ViewControllerRenderedState = .pending
     
     @IBOutlet weak var collectionView: UICollectionView!

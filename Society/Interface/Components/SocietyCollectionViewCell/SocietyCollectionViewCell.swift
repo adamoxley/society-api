@@ -26,6 +26,7 @@ class SocietyCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
         containerView.rounded(by: 10)
         logoImageView.roundCorner(of: [.topLeft, .bottomLeft], by: 10)
         joinStateButton.rounded(by: 5)
+        logoImageView.kf.indicatorType = .activity
     }
 
     func configure(with viewModel: ViewModel) {
@@ -35,5 +36,4 @@ class SocietyCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
         memberCountLabel.text = viewModel.memberCount
         logoImageView.kf.setImage(with: viewModel.imageURL, options: [.transition(.fade(0.3))])
     }
-
 }

@@ -40,7 +40,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqr-Nq-dj0">
                     <rect key="frame" x="20" y="214.5" width="374" height="535.5"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-y3-z8N">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-y3-z8N">
                     <rect key="frame" x="45" y="780" width="324" height="42"/>
                     <color key="backgroundColor" name="action"/>
                     <constraints>
@@ -57,7 +57,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" name="UI - View Background"/>
+            <color key="backgroundColor" name="viewBackground"/>
             <constraints>
                 <constraint firstItem="gAg-Z7-aKt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="58Q-Bu-0NN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mqr-Nq-dj0" secondAttribute="trailing" constant="80" id="K3O-KU-gW8">
@@ -81,9 +81,6 @@
     </objects>
     <resources>
         <image name="society_logo" width="81" height="27"/>
-        <namedColor name="UI - View Background">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="action">
             <color red="0.098039215686274508" green="0.47058823529411764" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -92,6 +89,9 @@
         </namedColor>
         <namedColor name="secondaryGrey">
             <color red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
