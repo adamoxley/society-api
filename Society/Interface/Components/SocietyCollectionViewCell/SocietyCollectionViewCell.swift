@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Combine
 
 class SocietyCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
 
     typealias ViewModel = SocietyViewModel
 
+    private var cancellables = Set<AnyCancellable>()
     var viewModel: ViewModel?
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -19,6 +21,10 @@ class SocietyCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var joinStateButton: UIButton!
     @IBOutlet weak var containerView: UIView!
+    
+    @IBAction func joinButtonTapped(_ sender: Any) {
+//        viewModel.list()
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

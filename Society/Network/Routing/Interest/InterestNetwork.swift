@@ -24,7 +24,7 @@ extension InterestNetwork: Listable {
     typealias ErrorType = HTTPError
     
     func list() -> AnyPublisher<ListResponse, ErrorType> {
-        let endpoint = InterestListEndpoint()
+        let endpoint = InterestEndpoint.interests
         return networkService.fetch(endpoint: endpoint)
     }
 }

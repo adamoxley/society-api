@@ -24,7 +24,12 @@ extension SocietyNetwork: Listable {
     typealias ErrorType = HTTPError
     
     func list() -> AnyPublisher<ListResponse, ErrorType> {
-        let endpoint = SocietyListEndpoint()
+        let endpoint = SocietyEndpoint.societies
+        return networkService.fetch(endpoint: endpoint)
+    }
+    
+    func join() -> AnyPublisher<EmptyResponse, ErrorType> {
+        let endpoint = SocietyEndpoint.societies
         return networkService.fetch(endpoint: endpoint)
     }
 }

@@ -8,12 +8,17 @@
 
 import Foundation
 
+public typealias HTTPHeaders = [String: String]
+public typealias HTTPBody = [String: Any]
+
 protocol EndPointType {
     
     var baseURL: URL { get }
-    var path: HTTPEndpoint { get }
+    var path: String { get }
     var method: HTTPMethod { get }
     var queryItems: [URLQueryItem] { get }
+    var headers: HTTPHeaders? { get }
+    var body: HTTPBody? { get }
 }
 
 extension EndPointType {

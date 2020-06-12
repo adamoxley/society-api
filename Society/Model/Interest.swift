@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Interest {
+class Interest: Codable {
     
     var id: UUID
     var name: String
@@ -20,5 +20,3 @@ struct Interest {
         case imageURL = "image_url"
     }
 }
-
-extension Interest: Codable {}

@@ -25,13 +25,14 @@
 		66178F58232569D000FA09B2 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66178F56232569D000FA09B2 /* InterestCollectionViewCell.swift */; };
 		66178F59232569D000FA09B2 /* InterestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */; };
 		66276220247F1F4300AC5BAA /* InterestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */; };
+		66491634248EE1E4006DBAE7 /* Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66491633248EE1E4006DBAE7 /* Fetchable.swift */; };
+		66491636248EE41E006DBAE7 /* FetchableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66491635248EE41E006DBAE7 /* FetchableResponse.swift */; };
 		666CEBDD24882DA100A59893 /* InterestListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809F9E2481D5A100506578 /* InterestListResponse.swift */; };
 		666CEBDF2488445700A59893 /* ListableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBDE2488445700A59893 /* ListableResponse.swift */; };
 		666CEBE424884AEA00A59893 /* SocietyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBE224884AEA00A59893 /* SocietyListViewController.swift */; };
 		666CEBE524884AEA00A59893 /* SocietyListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CEBE324884AEA00A59893 /* SocietyListView.xib */; };
 		666CEBE724884CC000A59893 /* SocietyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBE624884CC000A59893 /* SocietyListViewModel.swift */; };
 		666CEBEA24884CFF00A59893 /* SocietyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBE924884CFF00A59893 /* SocietyNetwork.swift */; };
-		666CEBED24884F3C00A59893 /* SocietyListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBEC24884F3C00A59893 /* SocietyListEndpoint.swift */; };
 		666CEBF024884FB100A59893 /* SocietyListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBEF24884FB100A59893 /* SocietyListResponse.swift */; };
 		666CEBFB2488598400A59893 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBFA2488598400A59893 /* UITableView+Extension.swift */; };
 		666CEBFE24885E6700A59893 /* SocietyOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBFC24885E6700A59893 /* SocietyOnboardingViewController.swift */; };
@@ -58,9 +59,10 @@
 		6698CC9C2409BCF200A9CF6D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC9B2409BCF200A9CF6D /* HTTPMethod.swift */; };
 		6698CC9F2409CB2E00A9CF6D /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC992409BCE400A9CF6D /* HTTPError.swift */; };
 		6698CCA12409D20F00A9CF6D /* URLPathEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CCA02409D20F00A9CF6D /* URLPathEncoder.swift */; };
-		6698CCA32409D2E700A9CF6D /* HTTPEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CCA22409D2E700A9CF6D /* HTTPEndpoint.swift */; };
+		66AF0CBB249189B700640AAC /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF0CBA249189B700640AAC /* EmptyResponse.swift */; };
+		66AF0CBD2491989200640AAC /* SocietyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF0CBC2491989200640AAC /* SocietyDetailViewModel.swift */; };
 		66B05148240AAFBE002E30E7 /* NetworkServicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B05147240AAFBE002E30E7 /* NetworkServicable.swift */; };
-		66B0514B240AC5E6002E30E7 /* InterestListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0514A240AC5E6002E30E7 /* InterestListEndpoint.swift */; };
+		66B0514B240AC5E6002E30E7 /* InterestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0514A240AC5E6002E30E7 /* InterestEndpoint.swift */; };
 		66B0514C240AC61B002E30E7 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC9D2409C46E00A9CF6D /* EndPointType.swift */; };
 		66C7A6BE23C3E74500D59E1B /* RequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7A6BD23C3E74500D59E1B /* RequestProviding.swift */; };
 		66C7A6C523C40CA700D59E1B /* URLStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7A6C423C40CA700D59E1B /* URLStore.swift */; };
@@ -71,6 +73,7 @@
 		66CED7522404939C00EFEF8F /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CED7512404939C00EFEF8F /* NSObject+Extension.swift */; };
 		66CED7552404963200EFEF8F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CED7542404963200EFEF8F /* ImageLoader.swift */; };
 		66D923A7248BE92500D4D3BC /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D923A6248BE92500D4D3BC /* ColumnFlowLayout.swift */; };
+		66D923AB248D923F00D4D3BC /* SocietyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D923AA248D923F00D4D3BC /* SocietyEndpoint.swift */; };
 		66EA82A62486F9AC004EABC9 /* Society.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA82A52486F9AC004EABC9 /* Society.swift */; };
 		66EA82A92486FE37004EABC9 /* SocietyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA82A82486FE37004EABC9 /* SocietyViewModel.swift */; };
 		66EA82AC2487006E004EABC9 /* ViewModelLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA82AB2487006E004EABC9 /* ViewModelLoadingState.swift */; };
@@ -118,12 +121,13 @@
 		66178F56232569D000FA09B2 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestCollectionViewCell.xib; sourceTree = "<group>"; };
 		6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListViewModel.swift; sourceTree = "<group>"; };
+		66491633248EE1E4006DBAE7 /* Fetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetchable.swift; sourceTree = "<group>"; };
+		66491635248EE41E006DBAE7 /* FetchableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchableResponse.swift; sourceTree = "<group>"; };
 		666CEBDE2488445700A59893 /* ListableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListableResponse.swift; sourceTree = "<group>"; };
 		666CEBE224884AEA00A59893 /* SocietyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListViewController.swift; sourceTree = "<group>"; };
 		666CEBE324884AEA00A59893 /* SocietyListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocietyListView.xib; sourceTree = "<group>"; };
 		666CEBE624884CC000A59893 /* SocietyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListViewModel.swift; sourceTree = "<group>"; };
 		666CEBE924884CFF00A59893 /* SocietyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyNetwork.swift; sourceTree = "<group>"; };
-		666CEBEC24884F3C00A59893 /* SocietyListEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListEndpoint.swift; sourceTree = "<group>"; };
 		666CEBEF24884FB100A59893 /* SocietyListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListResponse.swift; sourceTree = "<group>"; };
 		666CEBFA2488598400A59893 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		666CEBFC24885E6700A59893 /* SocietyOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocietyOnboardingViewController.swift; sourceTree = "<group>"; };
@@ -151,9 +155,10 @@
 		6698CC9B2409BCF200A9CF6D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		6698CC9D2409C46E00A9CF6D /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		6698CCA02409D20F00A9CF6D /* URLPathEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPathEncoder.swift; sourceTree = "<group>"; };
-		6698CCA22409D2E700A9CF6D /* HTTPEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndpoint.swift; sourceTree = "<group>"; };
+		66AF0CBA249189B700640AAC /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		66AF0CBC2491989200640AAC /* SocietyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyDetailViewModel.swift; sourceTree = "<group>"; };
 		66B05147240AAFBE002E30E7 /* NetworkServicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicable.swift; sourceTree = "<group>"; };
-		66B0514A240AC5E6002E30E7 /* InterestListEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListEndpoint.swift; sourceTree = "<group>"; };
+		66B0514A240AC5E6002E30E7 /* InterestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestEndpoint.swift; sourceTree = "<group>"; };
 		66C7A6BD23C3E74500D59E1B /* RequestProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProviding.swift; sourceTree = "<group>"; };
 		66C7A6C423C40CA700D59E1B /* URLStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStore.swift; sourceTree = "<group>"; };
 		66CED747240489E500EFEF8F /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
@@ -164,6 +169,7 @@
 		66CED7512404939C00EFEF8F /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		66CED7542404963200EFEF8F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		66D923A6248BE92500D4D3BC /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		66D923AA248D923F00D4D3BC /* SocietyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyEndpoint.swift; sourceTree = "<group>"; };
 		66EA82A52486F9AC004EABC9 /* Society.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Society.swift; sourceTree = "<group>"; };
 		66EA82A82486FE37004EABC9 /* SocietyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyViewModel.swift; sourceTree = "<group>"; };
 		66EA82AB2487006E004EABC9 /* ViewModelLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelLoadingState.swift; sourceTree = "<group>"; };
@@ -384,7 +390,7 @@
 		666CEBEB24884F3100A59893 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				666CEBEC24884F3C00A59893 /* SocietyListEndpoint.swift */,
+				66D923AA248D923F00D4D3BC /* SocietyEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			children = (
 				666CEBE824884CF000A59893 /* Society */,
 				66809FA32481D87600506578 /* Interest */,
+				66AF0CBA249189B700640AAC /* EmptyResponse.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -484,7 +491,6 @@
 			children = (
 				6698CC9B2409BCF200A9CF6D /* HTTPMethod.swift */,
 				6698CC992409BCE400A9CF6D /* HTTPError.swift */,
-				6698CCA22409D2E700A9CF6D /* HTTPEndpoint.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -501,7 +507,7 @@
 		66B05149240AC5CF002E30E7 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				66B0514A240AC5E6002E30E7 /* InterestListEndpoint.swift */,
+				66B0514A240AC5E6002E30E7 /* InterestEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -526,6 +532,8 @@
 				66B05147240AAFBE002E30E7 /* NetworkServicable.swift */,
 				66809FA62481D8A700506578 /* Listable.swift */,
 				666CEBDE2488445700A59893 /* ListableResponse.swift */,
+				66491633248EE1E4006DBAE7 /* Fetchable.swift */,
+				66491635248EE41E006DBAE7 /* FetchableResponse.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -560,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				66EA82A82486FE37004EABC9 /* SocietyViewModel.swift */,
+				66AF0CBC2491989200640AAC /* SocietyDetailViewModel.swift */,
 				666CEBE624884CC000A59893 /* SocietyListViewModel.swift */,
 			);
 			path = "Society ViewModel";
@@ -746,10 +755,10 @@
 				66CED750240490CF00EFEF8F /* UICollectionView+Extension.swift in Sources */,
 				666CEBF024884FB100A59893 /* SocietyListResponse.swift in Sources */,
 				66276220247F1F4300AC5BAA /* InterestListViewModel.swift in Sources */,
+				66491636248EE41E006DBAE7 /* FetchableResponse.swift in Sources */,
 				66178F58232569D000FA09B2 /* InterestCollectionViewCell.swift in Sources */,
 				66809FA12481D79B00506578 /* Array+Extension.swift in Sources */,
 				66CED7552404963200EFEF8F /* ImageLoader.swift in Sources */,
-				6698CCA32409D2E700A9CF6D /* HTTPEndpoint.swift in Sources */,
 				52F184BB22DA4BE1003AB57B /* Society.xcdatamodeld in Sources */,
 				666CEBFE24885E6700A59893 /* SocietyOnboardingViewController.swift in Sources */,
 				66B0514C240AC61B002E30E7 /* EndPointType.swift in Sources */,
@@ -764,6 +773,7 @@
 				66EA82A92486FE37004EABC9 /* SocietyViewModel.swift in Sources */,
 				6698CC932409B54900A9CF6D /* URLParameterEncoder.swift in Sources */,
 				666CEBDD24882DA100A59893 /* InterestListResponse.swift in Sources */,
+				66D923AB248D923F00D4D3BC /* SocietyEndpoint.swift in Sources */,
 				66CED748240489E500EFEF8F /* Interest.swift in Sources */,
 				66731ED323FF3BBD002F1B21 /* InterestListViewController.swift in Sources */,
 				66EA82AC2487006E004EABC9 /* ViewModelLoadingState.swift in Sources */,
@@ -772,6 +782,7 @@
 				66D923A7248BE92500D4D3BC /* ColumnFlowLayout.swift in Sources */,
 				524E0C88248C355600F36CC1 /* SocietyCollectionViewCell.swift in Sources */,
 				6698CC8A2405E09400A9CF6D /* DiscoverSearchController.swift in Sources */,
+				66AF0CBD2491989200640AAC /* SocietyDetailViewModel.swift in Sources */,
 				6698CC912409B50900A9CF6D /* ParameterEncoder.swift in Sources */,
 				66731ED623FF3F49002F1B21 /* UIColor+Extension.swift in Sources */,
 				52DF89F522DAA48C00F251E1 /* UIViewController+Extention.swift in Sources */,
@@ -784,18 +795,19 @@
 				6698CC8324049EE700A9CF6D /* UIImageView+Extension.swift in Sources */,
 				666CEBDF2488445700A59893 /* ListableResponse.swift in Sources */,
 				66CED7522404939C00EFEF8F /* NSObject+Extension.swift in Sources */,
+				66AF0CBB249189B700640AAC /* EmptyResponse.swift in Sources */,
 				66C7A6BE23C3E74500D59E1B /* RequestProviding.swift in Sources */,
 				666CEBE424884AEA00A59893 /* SocietyListViewController.swift in Sources */,
 				66C7A6C523C40CA700D59E1B /* URLStore.swift in Sources */,
 				666CEBEA24884CFF00A59893 /* SocietyNetwork.swift in Sources */,
 				6698CC952409B56100A9CF6D /* JSONParameterEncoder.swift in Sources */,
-				666CEBED24884F3C00A59893 /* SocietyListEndpoint.swift in Sources */,
-				66B0514B240AC5E6002E30E7 /* InterestListEndpoint.swift in Sources */,
+				66B0514B240AC5E6002E30E7 /* InterestEndpoint.swift in Sources */,
 				6698CC8E2409B47B00A9CF6D /* APIService.swift in Sources */,
 				666CEBE724884CC000A59893 /* SocietyListViewModel.swift in Sources */,
 				52F184B322DA4BE1003AB57B /* SceneDelegate.swift in Sources */,
 				666CEBFB2488598400A59893 /* UITableView+Extension.swift in Sources */,
 				666CEC022488618D00A59893 /* ViewControllerRenderedState.swift in Sources */,
+				66491634248EE1E4006DBAE7 /* Fetchable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,7 +907,7 @@
 		52E8BAE722E4CA5500DD1530 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				API_URL = "http://192.168.1.145:3000";
+				API_URL = "http://localhost:3000";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Society/Resources/Society.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1073,7 +1085,7 @@
 		52F184DB22DA4BE3003AB57B /* Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				API_URL = "http://192.168.1.145:3000";
+				API_URL = "http://localhost:3000";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Society/Resources/Society.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1094,7 +1106,7 @@
 		52F184DC22DA4BE3003AB57B /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				API_URL = "http://192.168.1.145:3000";
+				API_URL = "http://localhost:3000";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Society/Resources/Society.entitlements;
 				CODE_SIGN_STYLE = Automatic;
