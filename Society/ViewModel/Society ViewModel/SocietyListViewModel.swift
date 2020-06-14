@@ -31,7 +31,7 @@ class SocietyListViewModel: ViewModelListable {
         .map { response in
             response.data.map(ViewModelType.init)
         }
-        .map(Array.removeDuplicates)
+        .removeDuplicates()
         .receive(on: DispatchQueue.main)
         .sink(receiveCompletion: { [weak self] value in
             guard let self = self else { return }
