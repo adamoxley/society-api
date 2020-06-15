@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct InterestListResponse: ListableResponse {
+struct InterestListResponse: Decodable {
     
     typealias Model = Interest
     

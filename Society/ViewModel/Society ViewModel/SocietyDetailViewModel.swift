@@ -9,44 +9,44 @@
 import Foundation
 import Combine
 
-class SocietyDetailViewModel: ViewModelFetchable,  {
+class SocietyDetailViewModel {
     
     typealias ViewModelType = SocietyViewModel
     typealias ErrorType = HTTPError
     typealias Service = SocietyNetwork
     
-    var service: Service
-    var cancellable: Set<AnyCancellable>
+    private var id: UUID
+    private var service: SocietyNetwork
+    private var cancellable: Set<AnyCancellable>
     
-    @Published internal var dataSource: ViewModelType
-    @Published internal var state: ViewModelLoadingState<HTTPError> = .loading
+    @Published var dataSource: ViewModelType?
+    @Published var state: ViewModelLoadingState<HTTPError> = .loading
     
-    required init(with service: Service) {
+    required init(with service: Service, id: UUID) {
         self.service = service
+        self.id = id
         self.cancellable = Set<AnyCancellable>()
+        
+        fetch()
     }
     
-    func list() {
-        service.list()
-            .map { response in
-                response.data.map(ViewModelType.init)
-        }
-        .map(Array.removeDuplicates)
+    // MARK: - Methods
+    func fetch() {
+        service.fetch(id: id)
+        .map(SocietyViewModel.init)
         .receive(on: DispatchQueue.main)
         .sink(receiveCompletion: { [weak self] value in
             guard let self = self else { return }
-            
             switch value {
-            case .failure(let error):
+            case .failure:
                 self.dataSource = nil
-                self.state = .error(error)
             case .finished:
-                self.state = .complete
+                break
             }
             }, receiveValue: { [weak self] value in
                 guard let self = self else { return }
                 self.dataSource = value
         })
-            .store(in: &cancellable)
+        .store(in: &cancellable)
     }
 }

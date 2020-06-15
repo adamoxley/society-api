@@ -9,9 +9,9 @@
 import Foundation
 import Combine
 
-class SocietyListViewModel: ViewModelListable {
+class SocietyListViewModel {
     
-    typealias ViewModelType = SocietyViewModel
+    typealias ViewModelType = SocietyListCellViewModel
     typealias ErrorType = HTTPError
     typealias Service = SocietyNetwork
     
@@ -48,5 +48,13 @@ class SocietyListViewModel: ViewModelListable {
                 self.dataSource = value
         })
         .store(in: &cancellable)
+    }
+    
+    /// Returns an instance of `SocietyDetailViewModel` initialised
+    /// by this instances `Model`
+    func detailViewModel(at index: Int) -> SocietyDetailViewModel? {
+        guard let viewModel = self.dataSource[safe: index] else { return nil }
+        let service = SocietyNetwork()
+        return SocietyDetailViewModel(with: service, id: viewModel.id)
     }
 }

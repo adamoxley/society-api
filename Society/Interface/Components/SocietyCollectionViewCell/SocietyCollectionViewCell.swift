@@ -11,7 +11,7 @@ import Combine
 
 class SocietyCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
 
-    typealias ViewModel = SocietyViewModel
+    typealias ViewModel = SocietyListCellViewModel
 
     private var cancellables = Set<AnyCancellable>()
     var viewModel: ViewModel?

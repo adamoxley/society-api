@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SocietyListResponse: ListableResponse {
+struct SocietyListResponse: Decodable {
     
     typealias Model = Society
     

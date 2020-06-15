@@ -12,7 +12,7 @@ protocol ViewModel {
     
     associatedtype Model: Codable
     
-    var item: Model { get }
+    var model: Model { get }
     
-    init(item: Model)
+    init(model: Model)
 }

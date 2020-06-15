@@ -12,34 +12,38 @@ struct SocietyViewModel: ViewModel {
     
     typealias Model = Society
     
-    internal let item: Model
+    internal let model: Model
     
     var id: UUID {
-        return item.id
+        return model.id
     }
     
     var name: String {
-        return item.name
+        return model.name
     }
     
     var memberCount: String {
-        return "\(item.memberCount) Members"
+        return "\(model.memberCount) Members"
     }
     
     var joinState: Society.JoinState {
-        return item.state
+        return model.state
     }
     
     var imageURL: URL {
-        guard let imageURL = item.imageURL else {
+        guard let imageURL = model.imageURL else {
             return URL(fileReferenceLiteralResourceName: "iPad")
         }
         
         return imageURL
     }
     
-    init(item: Model) {
-        self.item = item
+    var comment: String? {
+        return model.comment
+    }
+    
+    init(model: Model) {
+        self.model = model
     }
 }
 

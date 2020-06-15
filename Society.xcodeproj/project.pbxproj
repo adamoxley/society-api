@@ -25,10 +25,7 @@
 		66178F58232569D000FA09B2 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66178F56232569D000FA09B2 /* InterestCollectionViewCell.swift */; };
 		66178F59232569D000FA09B2 /* InterestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */; };
 		66276220247F1F4300AC5BAA /* InterestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */; };
-		66491634248EE1E4006DBAE7 /* Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66491633248EE1E4006DBAE7 /* Fetchable.swift */; };
-		66491636248EE41E006DBAE7 /* FetchableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66491635248EE41E006DBAE7 /* FetchableResponse.swift */; };
 		666CEBDD24882DA100A59893 /* InterestListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809F9E2481D5A100506578 /* InterestListResponse.swift */; };
-		666CEBDF2488445700A59893 /* ListableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBDE2488445700A59893 /* ListableResponse.swift */; };
 		666CEBE424884AEA00A59893 /* SocietyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBE224884AEA00A59893 /* SocietyListViewController.swift */; };
 		666CEBE524884AEA00A59893 /* SocietyListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CEBE324884AEA00A59893 /* SocietyListView.xib */; };
 		666CEBE724884CC000A59893 /* SocietyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBE624884CC000A59893 /* SocietyListViewModel.swift */; };
@@ -46,7 +43,6 @@
 		66731ED623FF3F49002F1B21 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66731ED523FF3F49002F1B21 /* UIColor+Extension.swift */; };
 		66809FA12481D79B00506578 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809FA02481D79B00506578 /* Array+Extension.swift */; };
 		66809FA52481D88A00506578 /* InterestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809FA42481D88A00506578 /* InterestNetwork.swift */; };
-		66809FA72481D8A700506578 /* Listable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809FA62481D8A700506578 /* Listable.swift */; };
 		6698CC8324049EE700A9CF6D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC8224049EE700A9CF6D /* UIImageView+Extension.swift */; };
 		6698CC862405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC842405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift */; };
 		6698CC872405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6698CC852405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib */; };
@@ -77,7 +73,8 @@
 		66EA82A62486F9AC004EABC9 /* Society.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA82A52486F9AC004EABC9 /* Society.swift */; };
 		66EA82A92486FE37004EABC9 /* SocietyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA82A82486FE37004EABC9 /* SocietyViewModel.swift */; };
 		66EA82AC2487006E004EABC9 /* ViewModelLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA82AB2487006E004EABC9 /* ViewModelLoadingState.swift */; };
-		66EA82AE24870EE3004EABC9 /* ViewModelListable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA82AD24870EE3004EABC9 /* ViewModelListable.swift */; };
+		66F338AB2496D170000CCCA1 /* SocietyListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F338AA2496D170000CCCA1 /* SocietyListCellViewModel.swift */; };
+		66F338AD2496DD7A000CCCA1 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F338AC2496DD7A000CCCA1 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,9 +118,6 @@
 		66178F56232569D000FA09B2 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestCollectionViewCell.xib; sourceTree = "<group>"; };
 		6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListViewModel.swift; sourceTree = "<group>"; };
-		66491633248EE1E4006DBAE7 /* Fetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetchable.swift; sourceTree = "<group>"; };
-		66491635248EE41E006DBAE7 /* FetchableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchableResponse.swift; sourceTree = "<group>"; };
-		666CEBDE2488445700A59893 /* ListableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListableResponse.swift; sourceTree = "<group>"; };
 		666CEBE224884AEA00A59893 /* SocietyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListViewController.swift; sourceTree = "<group>"; };
 		666CEBE324884AEA00A59893 /* SocietyListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocietyListView.xib; sourceTree = "<group>"; };
 		666CEBE624884CC000A59893 /* SocietyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListViewModel.swift; sourceTree = "<group>"; };
@@ -142,7 +136,6 @@
 		66809F9E2481D5A100506578 /* InterestListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListResponse.swift; sourceTree = "<group>"; };
 		66809FA02481D79B00506578 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		66809FA42481D88A00506578 /* InterestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestNetwork.swift; sourceTree = "<group>"; };
-		66809FA62481D8A700506578 /* Listable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listable.swift; sourceTree = "<group>"; };
 		6698CC8224049EE700A9CF6D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6698CC842405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		6698CC852405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -173,7 +166,8 @@
 		66EA82A52486F9AC004EABC9 /* Society.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Society.swift; sourceTree = "<group>"; };
 		66EA82A82486FE37004EABC9 /* SocietyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyViewModel.swift; sourceTree = "<group>"; };
 		66EA82AB2487006E004EABC9 /* ViewModelLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelLoadingState.swift; sourceTree = "<group>"; };
-		66EA82AD24870EE3004EABC9 /* ViewModelListable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelListable.swift; sourceTree = "<group>"; };
+		66F338AA2496D170000CCCA1 /* SocietyListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListCellViewModel.swift; sourceTree = "<group>"; };
+		66F338AC2496DD7A000CCCA1 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +245,7 @@
 				6698CC8224049EE700A9CF6D /* UIImageView+Extension.swift */,
 				667040712483361A0002AED1 /* UIView+Extension.swift */,
 				666CEBFA2488598400A59893 /* UITableView+Extension.swift */,
+				66F338AC2496DD7A000CCCA1 /* Collection+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -471,7 +466,6 @@
 			children = (
 				66CED74B24048D7400EFEF8F /* ViewModel.swift */,
 				66CED74D24048D9300EFEF8F /* ViewModelConfigurable.swift */,
-				66EA82AD24870EE3004EABC9 /* ViewModelListable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -530,10 +524,6 @@
 				66C7A6BD23C3E74500D59E1B /* RequestProviding.swift */,
 				6698CC9D2409C46E00A9CF6D /* EndPointType.swift */,
 				66B05147240AAFBE002E30E7 /* NetworkServicable.swift */,
-				66809FA62481D8A700506578 /* Listable.swift */,
-				666CEBDE2488445700A59893 /* ListableResponse.swift */,
-				66491633248EE1E4006DBAE7 /* Fetchable.swift */,
-				66491635248EE41E006DBAE7 /* FetchableResponse.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -570,6 +560,7 @@
 				66EA82A82486FE37004EABC9 /* SocietyViewModel.swift */,
 				66AF0CBC2491989200640AAC /* SocietyDetailViewModel.swift */,
 				666CEBE624884CC000A59893 /* SocietyListViewModel.swift */,
+				66F338AA2496D170000CCCA1 /* SocietyListCellViewModel.swift */,
 			);
 			path = "Society ViewModel";
 			sourceTree = "<group>";
@@ -755,7 +746,6 @@
 				66CED750240490CF00EFEF8F /* UICollectionView+Extension.swift in Sources */,
 				666CEBF024884FB100A59893 /* SocietyListResponse.swift in Sources */,
 				66276220247F1F4300AC5BAA /* InterestListViewModel.swift in Sources */,
-				66491636248EE41E006DBAE7 /* FetchableResponse.swift in Sources */,
 				66178F58232569D000FA09B2 /* InterestCollectionViewCell.swift in Sources */,
 				66809FA12481D79B00506578 /* Array+Extension.swift in Sources */,
 				66CED7552404963200EFEF8F /* ImageLoader.swift in Sources */,
@@ -763,8 +753,8 @@
 				666CEBFE24885E6700A59893 /* SocietyOnboardingViewController.swift in Sources */,
 				66B0514C240AC61B002E30E7 /* EndPointType.swift in Sources */,
 				52DF89F622DAA48C00F251E1 /* String+Extention.swift in Sources */,
-				66EA82AE24870EE3004EABC9 /* ViewModelListable.swift in Sources */,
 				6698CC9F2409CB2E00A9CF6D /* HTTPError.swift in Sources */,
+				66F338AD2496DD7A000CCCA1 /* Collection+Extension.swift in Sources */,
 				6698CC8C2409B0AA00A9CF6D /* ViewModel.swift in Sources */,
 				6698CC9C2409BCF200A9CF6D /* HTTPMethod.swift in Sources */,
 				66CED74E24048D9300EFEF8F /* ViewModelConfigurable.swift in Sources */,
@@ -788,12 +778,10 @@
 				52DF89F522DAA48C00F251E1 /* UIViewController+Extention.swift in Sources */,
 				66704075248337F90002AED1 /* InterestOnboardingViewController.swift in Sources */,
 				66B05148240AAFBE002E30E7 /* NetworkServicable.swift in Sources */,
-				66809FA72481D8A700506578 /* Listable.swift in Sources */,
 				667040722483361A0002AED1 /* UIView+Extension.swift in Sources */,
 				66CED74A24048D5300EFEF8F /* InterestViewModel.swift in Sources */,
 				6698CC862405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift in Sources */,
 				6698CC8324049EE700A9CF6D /* UIImageView+Extension.swift in Sources */,
-				666CEBDF2488445700A59893 /* ListableResponse.swift in Sources */,
 				66CED7522404939C00EFEF8F /* NSObject+Extension.swift in Sources */,
 				66AF0CBB249189B700640AAC /* EmptyResponse.swift in Sources */,
 				66C7A6BE23C3E74500D59E1B /* RequestProviding.swift in Sources */,
@@ -802,12 +790,12 @@
 				666CEBEA24884CFF00A59893 /* SocietyNetwork.swift in Sources */,
 				6698CC952409B56100A9CF6D /* JSONParameterEncoder.swift in Sources */,
 				66B0514B240AC5E6002E30E7 /* InterestEndpoint.swift in Sources */,
+				66F338AB2496D170000CCCA1 /* SocietyListCellViewModel.swift in Sources */,
 				6698CC8E2409B47B00A9CF6D /* APIService.swift in Sources */,
 				666CEBE724884CC000A59893 /* SocietyListViewModel.swift in Sources */,
 				52F184B322DA4BE1003AB57B /* SceneDelegate.swift in Sources */,
 				666CEBFB2488598400A59893 /* UITableView+Extension.swift in Sources */,
 				666CEC022488618D00A59893 /* ViewControllerRenderedState.swift in Sources */,
-				66491634248EE1E4006DBAE7 /* Fetchable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

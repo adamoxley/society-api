@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-class InterestListViewModel: ViewModelListable {
+class InterestListViewModel {
 
     typealias ViewModelType = InterestViewModel
     typealias ErrorType = HTTPError

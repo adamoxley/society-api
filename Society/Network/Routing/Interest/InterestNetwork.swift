@@ -18,7 +18,7 @@ class InterestNetwork {
     }
 }
 
-extension InterestNetwork: Listable {
+extension InterestNetwork {
  
     typealias ListResponse = InterestListResponse
     typealias ErrorType = HTTPError
