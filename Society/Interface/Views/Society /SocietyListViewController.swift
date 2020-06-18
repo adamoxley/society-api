@@ -41,6 +41,7 @@ class SocietyListViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.allowsMultipleSelection = true
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         viewModel.list()
         
@@ -89,5 +90,19 @@ extension SocietyListViewController: UICollectionViewDataSource {
         return collectionView.dequeue(SocietyCollectionViewCell.self,
                                       configureFrom: viewModel.dataSource[indexPath.item],
                                       at: indexPath)
+    }
+}
+
+extension SocietyListViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let detailViewModel = viewModel.detailViewModel(at: indexPath.row) else {
+            print("done fucked up")
+            print(indexPath.row)
+            return
+        }
+
+        let viewController = SocietyViewController(viewModel: detailViewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

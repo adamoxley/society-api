@@ -38,8 +38,8 @@ struct SocietyViewModel: ViewModel {
         return imageURL
     }
     
-    var comment: String? {
-        return model.comment
+    var description: String? {
+        return model.description
     }
     
     init(model: Model) {

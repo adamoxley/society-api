@@ -22,7 +22,7 @@ struct Society {
     var memberCount: Int
     var state: JoinState
     var imageURL: URL?
-    var comment: String?
+    var description: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,6 +30,7 @@ struct Society {
         case memberCount = "member_count"
         case state
         case imageURL = "image_url"
+        case description
     }
 }
 

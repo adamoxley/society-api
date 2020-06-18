@@ -53,7 +53,7 @@ class InterestOnboardingViewController: UIViewController {
                 .store(in: &cancellables)
             
             viewController.$renderedState
-                .receive(on: RunLoop.main)
+                .receive(on: DispatchQueue.main)
                 .sink(receiveValue: stateValueHandler)
                 .store(in: &cancellables)
         }

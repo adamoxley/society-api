@@ -75,6 +75,8 @@
 		66EA82AC2487006E004EABC9 /* ViewModelLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA82AB2487006E004EABC9 /* ViewModelLoadingState.swift */; };
 		66F338AB2496D170000CCCA1 /* SocietyListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F338AA2496D170000CCCA1 /* SocietyListCellViewModel.swift */; };
 		66F338AD2496DD7A000CCCA1 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F338AC2496DD7A000CCCA1 /* Collection+Extension.swift */; };
+		66F338B324982A51000CCCA1 /* SocietyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F338B124982A51000CCCA1 /* SocietyViewController.swift */; };
+		66F338B424982A51000CCCA1 /* SocietyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F338B224982A51000CCCA1 /* SocietyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,8 @@
 		66EA82AB2487006E004EABC9 /* ViewModelLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelLoadingState.swift; sourceTree = "<group>"; };
 		66F338AA2496D170000CCCA1 /* SocietyListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListCellViewModel.swift; sourceTree = "<group>"; };
 		66F338AC2496DD7A000CCCA1 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		66F338B124982A51000CCCA1 /* SocietyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyViewController.swift; sourceTree = "<group>"; };
+		66F338B224982A51000CCCA1 /* SocietyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocietyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +362,7 @@
 		666CEBE02488498E00A59893 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				66F338B024982A1F000CCCA1 /* Society */,
 				66704073248337D30002AED1 /* Onboarding */,
 			);
 			path = Flows;
@@ -598,6 +603,15 @@
 			path = "Extended Elements";
 			sourceTree = "<group>";
 		};
+		66F338B024982A1F000CCCA1 /* Society */ = {
+			isa = PBXGroup;
+			children = (
+				66F338B124982A51000CCCA1 /* SocietyViewController.swift */,
+				66F338B224982A51000CCCA1 /* SocietyViewController.xib */,
+			);
+			path = Society;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -713,6 +727,7 @@
 				66178F59232569D000FA09B2 /* InterestCollectionViewCell.xib in Resources */,
 				66731ED423FF3BBD002F1B21 /* InterestListView.xib in Resources */,
 				66704077248338490002AED1 /* InterestOnboardingView.xib in Resources */,
+				66F338B424982A51000CCCA1 /* SocietyViewController.xib in Resources */,
 				524E0C89248C355600F36CC1 /* SocietyCollectionViewCell.xib in Resources */,
 				660BE0BC22EE5529006F61B6 /* LaunchScreen.storyboard in Resources */,
 				666CEBFF24885E6700A59893 /* SocietyOnboardingView.xib in Resources */,
@@ -784,6 +799,7 @@
 				6698CC8324049EE700A9CF6D /* UIImageView+Extension.swift in Sources */,
 				66CED7522404939C00EFEF8F /* NSObject+Extension.swift in Sources */,
 				66AF0CBB249189B700640AAC /* EmptyResponse.swift in Sources */,
+				66F338B324982A51000CCCA1 /* SocietyViewController.swift in Sources */,
 				66C7A6BE23C3E74500D59E1B /* RequestProviding.swift in Sources */,
 				666CEBE424884AEA00A59893 /* SocietyListViewController.swift in Sources */,
 				66C7A6C523C40CA700D59E1B /* URLStore.swift in Sources */,
