@@ -17,7 +17,7 @@ extension InterestEndpoint: EndPointType {
     var path: String {
         switch self {
         case .interests:
-            return "societies"
+            return "interests"
         }
     }
     

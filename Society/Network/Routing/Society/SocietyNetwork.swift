@@ -20,11 +20,11 @@ class SocietyNetwork {
 
 extension SocietyNetwork {
     
-    typealias ListResponse = SocietyListResponse
+    typealias ListResponseType = ListResponse<Society>
     typealias DetailResponse = Society
     typealias ErrorType = HTTPError
     
-    func list() -> AnyPublisher<ListResponse, ErrorType> {
+    func list() -> AnyPublisher<ListResponseType, ErrorType> {
         let endpoint = SocietyEndpoint.societies
         return networkService.fetch(endpoint: endpoint)
     }
