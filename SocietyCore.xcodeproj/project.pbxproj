@@ -18,10 +18,7 @@
 		52F184BD22DA4BE2003AB57B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F184BC22DA4BE2003AB57B /* Assets.xcassets */; };
 		52F184CB22DA4BE3003AB57B /* SocietyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F184CA22DA4BE3003AB57B /* SocietyTests.swift */; };
 		52F184D622DA4BE3003AB57B /* SocietyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F184D522DA4BE3003AB57B /* SocietyUITests.swift */; };
-		52F184E622DA4C1D003AB57B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F184E522DA4C1D003AB57B /* AuthenticationServices.framework */; };
-		52F184E822DA4C46003AB57B /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F184E722DA4C46003AB57B /* PassKit.framework */; };
 		660BE0BC22EE5529006F61B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660BE0BB22EE5529006F61B6 /* LaunchScreen.storyboard */; };
-		6614176E2489A6CB009F6714 /* TimelaneCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 6614176D2489A6CB009F6714 /* TimelaneCombine */; };
 		66178F58232569D000FA09B2 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66178F56232569D000FA09B2 /* InterestCollectionViewCell.swift */; };
 		66178F59232569D000FA09B2 /* InterestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */; };
 		66276220247F1F4300AC5BAA /* InterestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */; };
@@ -44,8 +41,6 @@
 		66809FA12481D79B00506578 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809FA02481D79B00506578 /* Array+Extension.swift */; };
 		66809FA52481D88A00506578 /* InterestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809FA42481D88A00506578 /* InterestNetwork.swift */; };
 		6698CC8324049EE700A9CF6D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC8224049EE700A9CF6D /* UIImageView+Extension.swift */; };
-		6698CC862405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC842405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift */; };
-		6698CC872405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6698CC852405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib */; };
 		6698CC8A2405E09400A9CF6D /* DiscoverSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC892405E09400A9CF6D /* DiscoverSearchController.swift */; };
 		6698CC8C2409B0AA00A9CF6D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CED74B24048D7400EFEF8F /* ViewModel.swift */; };
 		6698CC8E2409B47B00A9CF6D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC8D2409B47B00A9CF6D /* APIService.swift */; };
@@ -101,16 +96,16 @@
 		524E0C87248C355600F36CC1 /* SocietyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocietyCollectionViewCell.xib; sourceTree = "<group>"; };
 		52DF89F322DAA48C00F251E1 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		52DF89F422DAA48C00F251E1 /* String+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
-		52F184AD22DA4BE1003AB57B /* Society.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Society.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F184AD22DA4BE1003AB57B /* SocietyCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocietyCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F184B022DA4BE1003AB57B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F184B222DA4BE1003AB57B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		52F184BA22DA4BE1003AB57B /* Society.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Society.xcdatamodel; sourceTree = "<group>"; };
 		52F184BC22DA4BE2003AB57B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52F184C122DA4BE2003AB57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52F184C622DA4BE3003AB57B /* SocietyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocietyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F184C622DA4BE3003AB57B /* SocietyCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocietyCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F184CA22DA4BE3003AB57B /* SocietyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyTests.swift; sourceTree = "<group>"; };
 		52F184CC22DA4BE3003AB57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52F184D122DA4BE3003AB57B /* SocietyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocietyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F184D122DA4BE3003AB57B /* SocietyCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocietyCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F184D522DA4BE3003AB57B /* SocietyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyUITests.swift; sourceTree = "<group>"; };
 		52F184D722DA4BE3003AB57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F184E322DA4C0A003AB57B /* Society.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Society.entitlements; sourceTree = "<group>"; };
@@ -139,8 +134,6 @@
 		66809FA02481D79B00506578 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		66809FA42481D88A00506578 /* InterestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestNetwork.swift; sourceTree = "<group>"; };
 		6698CC8224049EE700A9CF6D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		6698CC842405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
-		6698CC852405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		6698CC892405E09400A9CF6D /* DiscoverSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSearchController.swift; sourceTree = "<group>"; };
 		6698CC8D2409B47B00A9CF6D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		6698CC902409B50900A9CF6D /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -180,9 +173,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52064D492484607500DC43D5 /* Kingfisher in Frameworks */,
-				52F184E822DA4C46003AB57B /* PassKit.framework in Frameworks */,
-				52F184E622DA4C1D003AB57B /* AuthenticationServices.framework in Frameworks */,
-				6614176E2489A6CB009F6714 /* TimelaneCombine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +272,9 @@
 		52F184AE22DA4BE1003AB57B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52F184AD22DA4BE1003AB57B /* Society.app */,
-				52F184C622DA4BE3003AB57B /* SocietyTests.xctest */,
-				52F184D122DA4BE3003AB57B /* SocietyUITests.xctest */,
+				52F184AD22DA4BE1003AB57B /* SocietyCore.app */,
+				52F184C622DA4BE3003AB57B /* SocietyCoreTests.xctest */,
+				52F184D122DA4BE3003AB57B /* SocietyCoreUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -332,10 +322,8 @@
 		660BE0B822EE4CCF006F61B6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				666CEBF124884FD600A59893 /* SocietyCollectionViewCell */,
-				66EB5A93236E3E770030EBE2 /* InterestCollectionViewCell */,
-				66EB5A94236E3EA70030EBE2 /* Extended Elements */,
-				6698CC882405D3E100A9CF6D /* SectionHeaderCollectionViewCell */,
+				66C3FD1124AFD77400C77670 /* Cells */,
+				66EB5A94236E3EA70030EBE2 /* Layouts */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -457,15 +445,6 @@
 			path = Interest;
 			sourceTree = "<group>";
 		};
-		6698CC882405D3E100A9CF6D /* SectionHeaderCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				6698CC842405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift */,
-				6698CC852405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib */,
-			);
-			path = SectionHeaderCollectionViewCell;
-			sourceTree = "<group>";
-		};
 		6698CC8B2409B03E00A9CF6D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +488,15 @@
 				66B0514A240AC5E6002E30E7 /* InterestEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		66C3FD1124AFD77400C77670 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				666CEBF124884FD600A59893 /* SocietyCollectionViewCell */,
+				66EB5A93236E3E770030EBE2 /* InterestCollectionViewCell */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		66C67DA2237F639A002436A4 /* ViewModel */ = {
@@ -595,12 +583,12 @@
 			path = InterestCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		66EB5A94236E3EA70030EBE2 /* Extended Elements */ = {
+		66EB5A94236E3EA70030EBE2 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
 				66D923A6248BE92500D4D3BC /* ColumnFlowLayout.swift */,
 			);
-			path = "Extended Elements";
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 		66F338B024982A1F000CCCA1 /* Society */ = {
@@ -615,9 +603,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52F184AC22DA4BE1003AB57B /* Society */ = {
+		52F184AC22DA4BE1003AB57B /* SocietyCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52F184DA22DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "Society" */;
+			buildConfigurationList = 52F184DA22DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyCore" */;
 			buildPhases = (
 				52F184A922DA4BE1003AB57B /* Sources */,
 				52F184AA22DA4BE1003AB57B /* Frameworks */,
@@ -627,18 +615,17 @@
 			);
 			dependencies = (
 			);
-			name = Society;
+			name = SocietyCore;
 			packageProductDependencies = (
 				52064D482484607500DC43D5 /* Kingfisher */,
-				6614176D2489A6CB009F6714 /* TimelaneCombine */,
 			);
 			productName = Society;
-			productReference = 52F184AD22DA4BE1003AB57B /* Society.app */;
+			productReference = 52F184AD22DA4BE1003AB57B /* SocietyCore.app */;
 			productType = "com.apple.product-type.application";
 		};
-		52F184C522DA4BE3003AB57B /* SocietyTests */ = {
+		52F184C522DA4BE3003AB57B /* SocietyCoreTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52F184DD22DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyTests" */;
+			buildConfigurationList = 52F184DD22DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyCoreTests" */;
 			buildPhases = (
 				52F184C222DA4BE3003AB57B /* Sources */,
 				52F184C322DA4BE3003AB57B /* Frameworks */,
@@ -649,14 +636,14 @@
 			dependencies = (
 				52F184C822DA4BE3003AB57B /* PBXTargetDependency */,
 			);
-			name = SocietyTests;
+			name = SocietyCoreTests;
 			productName = SocietyTests;
-			productReference = 52F184C622DA4BE3003AB57B /* SocietyTests.xctest */;
+			productReference = 52F184C622DA4BE3003AB57B /* SocietyCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		52F184D022DA4BE3003AB57B /* SocietyUITests */ = {
+		52F184D022DA4BE3003AB57B /* SocietyCoreUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52F184E022DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyUITests" */;
+			buildConfigurationList = 52F184E022DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyCoreUITests" */;
 			buildPhases = (
 				52F184CD22DA4BE3003AB57B /* Sources */,
 				52F184CE22DA4BE3003AB57B /* Frameworks */,
@@ -667,9 +654,9 @@
 			dependencies = (
 				52F184D322DA4BE3003AB57B /* PBXTargetDependency */,
 			);
-			name = SocietyUITests;
+			name = SocietyCoreUITests;
 			productName = SocietyUITests;
-			productReference = 52F184D122DA4BE3003AB57B /* SocietyUITests.xctest */;
+			productReference = 52F184D122DA4BE3003AB57B /* SocietyCoreUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -679,7 +666,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Adam Oxley";
 				TargetAttributes = {
 					52F184AC22DA4BE1003AB57B = {
@@ -695,7 +682,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52F184A822DA4BE0003AB57B /* Build configuration list for PBXProject "Society" */;
+			buildConfigurationList = 52F184A822DA4BE0003AB57B /* Build configuration list for PBXProject "SocietyCore" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -706,15 +693,14 @@
 			mainGroup = 52F184A422DA4BE0003AB57B;
 			packageReferences = (
 				52064D472484607500DC43D5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				6614176C2489A6CB009F6714 /* XCRemoteSwiftPackageReference "TimelaneCombine" */,
 			);
 			productRefGroup = 52F184AE22DA4BE1003AB57B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52F184AC22DA4BE1003AB57B /* Society */,
-				52F184C522DA4BE3003AB57B /* SocietyTests */,
-				52F184D022DA4BE3003AB57B /* SocietyUITests */,
+				52F184AC22DA4BE1003AB57B /* SocietyCore */,
+				52F184C522DA4BE3003AB57B /* SocietyCoreTests */,
+				52F184D022DA4BE3003AB57B /* SocietyCoreUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -732,7 +718,6 @@
 				660BE0BC22EE5529006F61B6 /* LaunchScreen.storyboard in Resources */,
 				666CEBFF24885E6700A59893 /* SocietyOnboardingView.xib in Resources */,
 				666CEBE524884AEA00A59893 /* SocietyListView.xib in Resources */,
-				6698CC872405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.xib in Resources */,
 				52F184BD22DA4BE2003AB57B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,7 +780,6 @@
 				66B05148240AAFBE002E30E7 /* NetworkServicable.swift in Sources */,
 				667040722483361A0002AED1 /* UIView+Extension.swift in Sources */,
 				66CED74A24048D5300EFEF8F /* InterestViewModel.swift in Sources */,
-				6698CC862405D3DD00A9CF6D /* SectionHeaderCollectionViewCell.swift in Sources */,
 				6698CC8324049EE700A9CF6D /* UIImageView+Extension.swift in Sources */,
 				66CED7522404939C00EFEF8F /* NSObject+Extension.swift in Sources */,
 				66AF0CBB249189B700640AAC /* EmptyResponse.swift in Sources */,
@@ -836,12 +820,12 @@
 /* Begin PBXTargetDependency section */
 		52F184C822DA4BE3003AB57B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52F184AC22DA4BE1003AB57B /* Society */;
+			target = 52F184AC22DA4BE1003AB57B /* SocietyCore */;
 			targetProxy = 52F184C722DA4BE3003AB57B /* PBXContainerItemProxy */;
 		};
 		52F184D322DA4BE3003AB57B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52F184AC22DA4BE1003AB57B /* Society */;
+			target = 52F184AC22DA4BE1003AB57B /* SocietyCore */;
 			targetProxy = 52F184D222DA4BE3003AB57B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -874,6 +858,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -898,7 +883,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -917,7 +902,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = Society/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -937,6 +922,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = SocietyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -946,7 +932,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Society.app/Society";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocietyCore.app/SocietyCore";
 			};
 			name = Staging;
 		};
@@ -957,6 +943,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = SocietyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -997,6 +984,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1021,7 +1009,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1058,6 +1046,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1076,7 +1065,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1095,7 +1084,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = Society/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1116,7 +1105,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = Society/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1136,6 +1125,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = SocietyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1145,7 +1135,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Society.app/Society";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocietyCore.app/SocietyCore";
 			};
 			name = Dev;
 		};
@@ -1157,6 +1147,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = SocietyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1166,7 +1157,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Society.app/Society";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocietyCore.app/SocietyCore";
 			};
 			name = Production;
 		};
@@ -1177,6 +1168,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = SocietyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1197,6 +1189,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C78USKHQG4;
 				INFOPLIST_FILE = SocietyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1213,7 +1206,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52F184A822DA4BE0003AB57B /* Build configuration list for PBXProject "Society" */ = {
+		52F184A822DA4BE0003AB57B /* Build configuration list for PBXProject "SocietyCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52F184D822DA4BE3003AB57B /* Dev */,
@@ -1223,7 +1216,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Production;
 		};
-		52F184DA22DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "Society" */ = {
+		52F184DA22DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52F184DB22DA4BE3003AB57B /* Dev */,
@@ -1233,7 +1226,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Production;
 		};
-		52F184DD22DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyTests" */ = {
+		52F184DD22DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyCoreTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52F184DE22DA4BE3003AB57B /* Dev */,
@@ -1243,7 +1236,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Production;
 		};
-		52F184E022DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyUITests" */ = {
+		52F184E022DA4BE3003AB57B /* Build configuration list for PBXNativeTarget "SocietyCoreUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52F184E122DA4BE3003AB57B /* Dev */,
@@ -1264,14 +1257,6 @@
 				minimumVersion = 5.14.0;
 			};
 		};
-		6614176C2489A6CB009F6714 /* XCRemoteSwiftPackageReference "TimelaneCombine" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/icanzilb/TimelaneCombine";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.9;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1279,11 +1264,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 52064D472484607500DC43D5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		6614176D2489A6CB009F6714 /* TimelaneCombine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6614176C2489A6CB009F6714 /* XCRemoteSwiftPackageReference "TimelaneCombine" */;
-			productName = TimelaneCombine;
 		};
 /* End XCSwiftPackageProductDependency section */
 

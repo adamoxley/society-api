@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1200"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52F184AC22DA4BE1003AB57B"
-               BuildableName = "Society.app"
-               BlueprintName = "Society"
-               ReferencedContainer = "container:Society.xcodeproj">
+               BuildableName = "SocietyCore.app"
+               BlueprintName = "SocietyCore"
+               ReferencedContainer = "container:SocietyCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52F184AC22DA4BE1003AB57B"
-            BuildableName = "Society.app"
-            BlueprintName = "Society"
-            ReferencedContainer = "container:Society.xcodeproj">
+            BuildableName = "SocietyCore.app"
+            BlueprintName = "SocietyCore"
+            ReferencedContainer = "container:SocietyCore.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52F184AC22DA4BE1003AB57B"
-            BuildableName = "Society.app"
-            BlueprintName = "Society"
-            ReferencedContainer = "container:Society.xcodeproj">
+            BuildableName = "SocietyCore.app"
+            BlueprintName = "SocietyCore"
+            ReferencedContainer = "container:SocietyCore.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

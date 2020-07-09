@@ -13,8 +13,8 @@ class SocietyNetwork {
     
     private let networkService: NetworkServicable
     
-    init() {
-        self.networkService = APIService()
+    init(networkService: NetworkServicable = APIService()) {
+        self.networkService = networkService
     }
 }
 
