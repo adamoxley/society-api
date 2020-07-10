@@ -23,6 +23,7 @@
 		66178F59232569D000FA09B2 /* InterestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */; };
 		66276220247F1F4300AC5BAA /* InterestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */; };
 		665CD55624B7C3560094C33E /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665CD55524B7C3560094C33E /* ListResponse.swift */; };
+		665CD55824B7C8CA0094C33E /* HTTPHeaderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665CD55724B7C8CA0094C33E /* HTTPHeaderEncoder.swift */; };
 		666CEBE424884AEA00A59893 /* SocietyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBE224884AEA00A59893 /* SocietyListViewController.swift */; };
 		666CEBE524884AEA00A59893 /* SocietyListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CEBE324884AEA00A59893 /* SocietyListView.xib */; };
 		666CEBE724884CC000A59893 /* SocietyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CEBE624884CC000A59893 /* SocietyListViewModel.swift */; };
@@ -38,6 +39,7 @@
 		66731ED323FF3BBD002F1B21 /* InterestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66731ED123FF3BBD002F1B21 /* InterestListViewController.swift */; };
 		66731ED423FF3BBD002F1B21 /* InterestListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66731ED223FF3BBD002F1B21 /* InterestListView.xib */; };
 		66731ED623FF3F49002F1B21 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66731ED523FF3F49002F1B21 /* UIColor+Extension.swift */; };
+		6679628624B8E36800CC3807 /* SocietyJoinStateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679628524B8E36800CC3807 /* SocietyJoinStateResponse.swift */; };
 		66809FA12481D79B00506578 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809FA02481D79B00506578 /* Array+Extension.swift */; };
 		66809FA52481D88A00506578 /* InterestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66809FA42481D88A00506578 /* InterestNetwork.swift */; };
 		6698CC8324049EE700A9CF6D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698CC8224049EE700A9CF6D /* UIImageView+Extension.swift */; };
@@ -116,6 +118,7 @@
 		66178F57232569D000FA09B2 /* InterestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestCollectionViewCell.xib; sourceTree = "<group>"; };
 		6627621F247F1F4300AC5BAA /* InterestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListViewModel.swift; sourceTree = "<group>"; };
 		665CD55524B7C3560094C33E /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
+		665CD55724B7C8CA0094C33E /* HTTPHeaderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderEncoder.swift; sourceTree = "<group>"; };
 		666CEBE224884AEA00A59893 /* SocietyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListViewController.swift; sourceTree = "<group>"; };
 		666CEBE324884AEA00A59893 /* SocietyListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocietyListView.xib; sourceTree = "<group>"; };
 		666CEBE624884CC000A59893 /* SocietyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyListViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 		66731ED123FF3BBD002F1B21 /* InterestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListViewController.swift; sourceTree = "<group>"; };
 		66731ED223FF3BBD002F1B21 /* InterestListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestListView.xib; sourceTree = "<group>"; };
 		66731ED523FF3F49002F1B21 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6679628524B8E36800CC3807 /* SocietyJoinStateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocietyJoinStateResponse.swift; sourceTree = "<group>"; };
 		66809FA02481D79B00506578 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		66809FA42481D88A00506578 /* InterestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestNetwork.swift; sourceTree = "<group>"; };
 		6698CC8224049EE700A9CF6D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -379,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				666CEBEF24884FB100A59893 /* SocietyListResponse.swift */,
+				6679628524B8E36800CC3807 /* SocietyJoinStateResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -444,6 +449,7 @@
 				6698CCA02409D20F00A9CF6D /* URLPathEncoder.swift */,
 				6698CC922409B54900A9CF6D /* URLParameterEncoder.swift */,
 				6698CC942409B56100A9CF6D /* JSONParameterEncoder.swift */,
+				665CD55724B7C8CA0094C33E /* HTTPHeaderEncoder.swift */,
 			);
 			path = Encoders;
 			sourceTree = "<group>";
@@ -728,6 +734,7 @@
 				66CED7552404963200EFEF8F /* ImageLoader.swift in Sources */,
 				52F184BB22DA4BE1003AB57B /* Society.xcdatamodeld in Sources */,
 				666CEBFE24885E6700A59893 /* SocietyOnboardingViewController.swift in Sources */,
+				665CD55824B7C8CA0094C33E /* HTTPHeaderEncoder.swift in Sources */,
 				66B0514C240AC61B002E30E7 /* EndPointType.swift in Sources */,
 				52DF89F622DAA48C00F251E1 /* String+Extention.swift in Sources */,
 				6698CC9F2409CB2E00A9CF6D /* HTTPError.swift in Sources */,
@@ -747,6 +754,7 @@
 				66809FA52481D88A00506578 /* InterestNetwork.swift in Sources */,
 				66D923A7248BE92500D4D3BC /* ColumnFlowLayout.swift in Sources */,
 				524E0C88248C355600F36CC1 /* SocietyCollectionViewCell.swift in Sources */,
+				6679628624B8E36800CC3807 /* SocietyJoinStateResponse.swift in Sources */,
 				6698CC8A2405E09400A9CF6D /* DiscoverSearchController.swift in Sources */,
 				66AF0CBD2491989200640AAC /* SocietyDetailViewModel.swift in Sources */,
 				6698CC912409B50900A9CF6D /* ParameterEncoder.swift in Sources */,

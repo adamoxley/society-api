@@ -8,13 +8,12 @@
 
 import Foundation
 
-struct Society {
-    
+struct Society: Codable {
+
     enum JoinState: Int, Codable {
-    case pending
+    case pending = 1
     case join
     case joined
-    case leave
     }
     
     var id: UUID
@@ -33,5 +32,3 @@ struct Society {
         case description
     }
 }
-
-extension Society: Codable {}

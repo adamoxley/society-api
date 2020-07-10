@@ -23,7 +23,12 @@ class SocietyCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
     @IBOutlet weak var containerView: UIView!
     
     @IBAction func joinButtonTapped(_ sender: Any) {
-//        viewModel.list()
+        guard let viewModel = viewModel else { return }
+        
+        switch viewModel.joinState {
+        case .join: viewModel.join()
+        case .joined, .pending: viewModel.leave()
+        }
     }
 
     override func awakeFromNib() {
@@ -41,5 +46,24 @@ class SocietyCollectionViewCell: UICollectionViewCell, ViewModelConfigurable {
         nameLabel.text = viewModel.name
         memberCountLabel.text = viewModel.memberCount
         logoImageView.kf.setImage(with: viewModel.imageURL, options: [.transition(.fade(0.3))])
+        
+        viewModel.$joinState
+            .receive(on: DispatchQueue.main)
+            .sink() { [self] value in
+                UIView.animate(withDuration: 0.3, animations: {
+                    switch value {
+                    case .join:
+                        joinStateButton.setTitle("Join", for: .normal)
+                        joinStateButton.backgroundColor = UIColor.asset(.action)
+                    case .joined:
+                        joinStateButton.setTitle("Leave", for: .normal)
+                        joinStateButton.backgroundColor = UIColor.asset(.destructive)
+                    case .pending:
+                        joinStateButton.setTitle("Pending", for: .normal)
+                        joinStateButton.backgroundColor = UIColor.asset(.action)
+                    }
+                })
+            }
+            .store(in: &cancellables)
     }
 }

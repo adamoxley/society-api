@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import Combine
 
-struct SocietyListCellViewModel: ViewModel {
+class SocietyListCellViewModel: ViewModel {
     
     typealias Model = Society
     
-    internal let model: Model
+    @Published var state: ViewModelLoadingState<HTTPError> = .pending
+    @Published var joinState: Society.JoinState
+    
+    private var service: SocietyNetwork
+    private var cancellable: Set<AnyCancellable>
+    internal var model: Model
     
     var id: UUID {
         return model.id
@@ -26,10 +32,6 @@ struct SocietyListCellViewModel: ViewModel {
         return "\(model.memberCount) Members"
     }
     
-    var joinState: Society.JoinState {
-        return model.state
-    }
-    
     var imageURL: URL {
         guard let imageURL = model.imageURL else {
             return URL(fileReferenceLiteralResourceName: "iPad")
@@ -38,8 +40,45 @@ struct SocietyListCellViewModel: ViewModel {
         return imageURL
     }
     
-    init(model: Model) {
+    required init(model: Model) {
+        self.service = SocietyNetwork()
+        self.cancellable = Set<AnyCancellable>()
+        
         self.model = model
+        
+        // Set the initial models join state
+        joinState = model.state
+    }
+    
+    
+    // MARK: - Join State Network
+    
+    func join() {
+        let result = service.join(id: id)
+        handleJoinStateResult(result)
+    }
+    
+    func leave() {
+        let result = service.leave(id: id)
+        handleJoinStateResult(result)
+    }
+    
+    private func handleJoinStateResult(_ result: AnyPublisher<SocietyJoinStateResponse, SocietyNetwork.ErrorType>) {
+        result
+        .receive(on: DispatchQueue.main)
+        .sink(receiveCompletion: { [weak self] value in
+            guard let self = self else { return }
+            switch value {
+            case .failure:
+                self.state = .error(.badRequest)
+            case .finished:
+                self.state = .complete
+            }
+        }, receiveValue: { [weak self] value in
+            guard let self = self else { return }
+            self.joinState = value.state
+        })
+        .store(in: &cancellable)
     }
 }
 
@@ -47,7 +86,7 @@ extension SocietyListCellViewModel: Hashable {
     static func == (lhs: SocietyListCellViewModel, rhs: SocietyListCellViewModel) -> Bool {
         return lhs.id == rhs.id
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.id)
     }

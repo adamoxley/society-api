@@ -20,7 +20,9 @@ struct APIService: NetworkServicable {
         var request = URLRequest(url: url)
                 
         // Populate the URL with any parameters from the endpoint
-        URLParameterEncoder.encode(urlRequest: &request, with: endpoint.queryItems)
+        if let queryItems = endpoint.queryItems {
+            URLParameterEncoder.encode(urlRequest: &request, with: queryItems)
+        }
                 
         // Add on the HTTP method
         request.httpMethod = endpoint.method.rawValue
@@ -28,10 +30,16 @@ struct APIService: NetworkServicable {
         // Add the HTTP body if the endpoint is a POST
         if endpoint.method == .POST {
             do {
-                guard let body = endpoint.body else { throw HTTPError.encodingFailure }
-                try JSONParameterEncoder.encode(urlRequest: &request, with: body)
+                if let body = endpoint.body {
+                    try JSONParameterEncoder.encode(urlRequest: &request, with: body)
+                } else {
+                    // It is valid for a POST to not contain a body, in this case
+                    // set the header Content-Length: 0 on the URLRequest
+                    let headers = [(header: "Content-Length", value: "0")]
+                    try? HTTPHeaderEncoder.encode(urlRequest: &request, with: headers)
+                }
             } catch {
-                let httpError = error as? HTTPError ?? .decodingError
+                let httpError = error as? HTTPError ?? .encodingFailure
                 return Fail(error: httpError).eraseToAnyPublisher()
             }
         }
@@ -48,7 +56,7 @@ struct APIService: NetworkServicable {
             switch httpResponse.statusCode {
             case 200, 201:
                 do { return try decoder.decode(T.self, from: result.data) }
-                catch { throw HTTPError.clientError }
+                catch { throw HTTPError.decodingError }
             case 204: return EmptyResponse() as! T // Todo: Probably crashes
             case 300...399: throw HTTPError.redirect
             case 400: throw HTTPError.badRequest

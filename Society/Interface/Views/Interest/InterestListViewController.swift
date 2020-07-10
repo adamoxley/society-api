@@ -60,6 +60,7 @@ class InterestListViewController: UIViewController {
     
     private func stateValueHandler(_ state: ViewModelLoadingState<HTTPError>) -> Void {
         switch state {
+        case .pending: return
         case .loading:
             failureButton.isHidden = true
             activityIndicator.isHidden = false

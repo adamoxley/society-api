@@ -26,8 +26,8 @@ class SocietyViewController: UIViewController {
         
         viewModel.$dataSource
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { value in
-                print(value)
+            .sink(receiveValue: { [self] value in
+                title = value?.name
             })
             .store(in: &cancellables)
     }

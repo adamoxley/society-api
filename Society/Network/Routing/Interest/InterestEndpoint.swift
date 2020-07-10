@@ -28,8 +28,8 @@ extension InterestEndpoint: EndPointType {
         }
     }
     
-    var queryItems: [URLQueryItem] {
-        return []
+    var queryItems: [URLQueryItem]? {
+        return nil
     }
     
     var headers: HTTPHeaders? {

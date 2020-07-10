@@ -18,7 +18,12 @@ struct JSONParameterEncoder: ParameterEncoder {
         }
         
         urlRequest.httpBody = JSONData
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        let headers = [
+            (header: "Accept", value: "application/json"),
+            (header: "Content-Type", value: "application/json")
+        ]
+        
+        try? HTTPHeaderEncoder.encode(urlRequest: &urlRequest, with: headers)
     }
 }

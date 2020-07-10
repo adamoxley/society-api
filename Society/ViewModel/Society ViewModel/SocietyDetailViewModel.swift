@@ -40,8 +40,9 @@ class SocietyDetailViewModel {
             switch value {
             case .failure:
                 self.dataSource = nil
+                self.state = .error(.badRequest)
             case .finished:
-                break
+                self.state = .complete
             }
             }, receiveValue: { [weak self] value in
                 guard let self = self else { return }

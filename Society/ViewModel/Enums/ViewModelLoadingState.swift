@@ -9,6 +9,7 @@
 import Foundation
 
 enum ViewModelLoadingState<T> {
+    case pending
     case loading
     case complete
     case error(T)

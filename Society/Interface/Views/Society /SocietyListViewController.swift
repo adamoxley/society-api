@@ -58,8 +58,15 @@ class SocietyListViewController: UIViewController {
             .store(in: &cancellables)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain,
+                                                                                         target: nil, action: nil)
+    }
+    
     private func stateValueHandler(_ state: ViewModelLoadingState<HTTPError>) -> Void {
         switch state {
+        case .pending: return
         case .loading:
             failureButton.isHidden = true
             activityIndicator.isHidden = false
@@ -97,8 +104,6 @@ extension SocietyListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let detailViewModel = viewModel.detailViewModel(at: indexPath.row) else {
-            print("done fucked up")
-            print(indexPath.row)
             return
         }
 

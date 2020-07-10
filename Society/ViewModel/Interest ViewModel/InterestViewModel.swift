@@ -39,7 +39,7 @@ extension InterestViewModel: Hashable {
     static func == (lhs: InterestViewModel, rhs: InterestViewModel) -> Bool {
         return lhs.id == rhs.id
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.id)
     }
