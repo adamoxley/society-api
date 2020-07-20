@@ -12,6 +12,9 @@ final class Interest: Model, Content {
     
     @Field(key: "image")
     var image: String
+    
+    @Siblings(through: UserInterestPivot.self, from: \.$interest, to: \.$user)
+    public var users: [User]
 
     init() {}
 
