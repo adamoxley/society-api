@@ -24,25 +24,13 @@ struct UserController: RouteCollection {
     
     fileprivate func retrieveID(req: Request) throws -> EventLoopFuture<UserResponse> {
         let userID = try req.parameters.require("id", as: User.IDValue.self)
-        
-        return req.users
-            .find(id: userID)
-            .unwrap(or: Abort(.notFound))
-            .flatMapThrowing { user in
-                UserResponse(from: user)
-            }
+        return try retrieveUser(req, userID: userID)
     }
     
     fileprivate func retrieve(req: Request) throws -> EventLoopFuture<UserResponse> {
         let user = try req.auth.require(User.self)
         guard let userID = try? user.requireID() else { throw Abort(.badRequest) }
-        
-        return req.users
-            .find(id: userID)
-            .unwrap(or: Abort(.forbidden))
-            .flatMapThrowing { user in
-                UserResponse(from: user)
-            }
+        return try retrieveUser(req, userID: userID)
     }
     
     fileprivate func update(req: Request) throws -> EventLoopFuture<UserResponse> {
@@ -75,5 +63,14 @@ struct UserController: RouteCollection {
         return req.users
             .delete(id: userID)
             .map { .gone }
+    }
+    
+    fileprivate func retrieveUser(_ req: Request, userID: User.IDValue) throws -> EventLoopFuture<UserResponse> {
+        return req.users
+            .find(id: userID)
+            .unwrap(or: Abort(.forbidden))
+            .flatMapThrowing { user in
+                UserResponse(from: user)
+            }
     }
 }
