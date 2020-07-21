@@ -8,7 +8,7 @@ struct InterestResponse: Content {
     init(id: UUID? = nil, name: String, image: String) {
         self.id = id
         self.name = name
-        self.image = image
+        self.image = "\(Constants.MEDIA_URL)\(Constants.INTEREST_IMAGE_LOCATION)\(image)"
     }
     
     init(from interest: Interest) {

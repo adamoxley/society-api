@@ -4,6 +4,8 @@ import Fluent
 protocol UserRepository: Repository {
     func create(_ user: User) -> EventLoopFuture<Void>
     func delete(id: UUID) -> EventLoopFuture<Void>
+    func filter<Field>(filterBy field: KeyPath<User, Field>, value: Field.Value)
+        -> EventLoopFuture<[User]> where Field: QueryableProperty, Field.Model == User
     func all<Field>(sortedOn field: KeyPath<User, Field>)
         -> EventLoopFuture<[User]> where Field: QueryableProperty, Field.Model == User
     func find(id: UUID?) -> EventLoopFuture<User?>
@@ -29,6 +31,13 @@ struct DatabaseUserRepository: UserRepository, DatabaseRepository {
             .delete()
     }
     
+    func filter<Field>(filterBy field: KeyPath<User, Field>, value: Field.Value)
+    -> EventLoopFuture<[User]> where Field: QueryableProperty, Field.Model == User {
+        return User.query(on: database)
+            .filter(field == value)
+            .all()
+    }
+    
     func all<Field>(sortedOn field: KeyPath<User, Field>)
         -> EventLoopFuture<[User]> where Field: QueryableProperty, Field.Model == User {
         return User.query(on: database)
@@ -49,7 +58,7 @@ struct DatabaseUserRepository: UserRepository, DatabaseRepository {
     func update(_ user: User) -> EventLoopFuture<Void> {
         return user.update(on: database)
     }
-    
+
     func set<Field>(_ field: KeyPath<User, Field>,
                     to value: Field.Value,
                     for userID: UUID) -> EventLoopFuture<Void> where Field: QueryableProperty, Field.Model == User {

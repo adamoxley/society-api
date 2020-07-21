@@ -7,4 +7,10 @@ struct Constants {
     
     /// Lifetime of reset password tokens: Default 1 hour (seconds)
     static let RESET_PASSWORD_TOKEN_LIFETIME: Double = 60 * 60
+    
+    /// Location of AWS Bucket
+    static let MEDIA_URL: String = "https://society-media-dev.s3.eu-west-2.amazonaws.com/"
+    
+    // Location path of Interest images
+    static let INTEREST_IMAGE_LOCATION: String = "interest_icons/"
 }

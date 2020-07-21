@@ -34,6 +34,9 @@ final class User: Model {
     
     @Field(key: "date_of_birth")
     var dateOfBirth: Date?
+    
+    @Siblings(through: UserInterestPivot.self, from: \.$user, to: \.$interest)
+    public var interests: [Interest]
 
     init() {}
 
