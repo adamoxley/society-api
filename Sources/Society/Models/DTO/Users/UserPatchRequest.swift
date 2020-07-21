@@ -5,6 +5,7 @@ struct UserPatchRequest: Content {
     let username: String?
     let email: String?
     let dateOfBirth: Date?
+    let interests: [UUID]?
 }
 
 extension UserPatchRequest: Validatable {

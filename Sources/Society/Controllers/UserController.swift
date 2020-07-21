@@ -5,19 +5,21 @@ struct UserController: RouteCollection {
     
     func boot(routes: RoutesBuilder) throws {
         let usersRoutes = routes.grouped("users")
-        usersRoutes.get("", use: index)
+        usersRoutes.get(use: index)
         usersRoutes.get(":id", use: retrieveID)
         
         let userProtectedRoutes = usersRoutes.grouped(UserToken.authenticator())
-        userProtectedRoutes.get("me", use: retrieve)
-        userProtectedRoutes.delete("me", use: delete)
-        userProtectedRoutes.patch("me", use: update)
+        let usersMeRoutes = userProtectedRoutes.grouped("me")
+        usersMeRoutes.get(use: retrieve)
+        usersMeRoutes.delete(use: delete)
+        usersMeRoutes.patch(use: update)
+        usersMeRoutes.get("interests", use: interests)
     }
 
     fileprivate func index(req: Request) throws -> EventLoopFuture<[UserResponse]> {
         return req.users
             .all(sortedOn: \.$createdAt)
-            .flatMapThrowing { users in
+            .map { users in
                 users.map { UserResponse(from: $0) }
             }
     }
@@ -42,18 +44,26 @@ struct UserController: RouteCollection {
         return req.users
             .find(id: userID)
             .unwrap(or: Abort(.notFound))
-            .flatMap { user in
+            .map { user -> User in
+                if let name = userPatchRequest.name { user.name = name }
                 if let name = userPatchRequest.name { user.name = name }
                 if let username = userPatchRequest.username { user.username = username }
                 if let email = userPatchRequest.email { user.email = email }
                 if let dateOfBirth = userPatchRequest.dateOfBirth { user.dateOfBirth = dateOfBirth }
                 
-                return req.users
-                    .update(user)
-                    .flatMapThrowing {
-                        UserResponse(from: user)
-                    }
+                return user
             }
+            .flatMap { user -> EventLoopFuture<User> in
+                guard let interests = userPatchRequest.interests else {
+                    return req.eventLoop.makeSucceededFuture(user)
+                }
+
+                return req.interests.filter(filterBy: \.$id, values: interests)
+                    .flatMap { user.$interests.attach($0, on: req.db) }
+                    .transform(to: user)
+            }
+            .flatMap { req.users.update($0) }
+            .map { UserResponse(from: user) }
     }
 
     fileprivate func delete(req: Request) throws -> EventLoopFuture<HTTPStatus> {
@@ -63,6 +73,14 @@ struct UserController: RouteCollection {
         return req.users
             .delete(id: userID)
             .map { .gone }
+    }
+    
+    fileprivate func interests(req: Request) throws -> EventLoopFuture<[InterestResponse]> {
+        let user = try req.auth.require(User.self)
+        
+        return user.$interests.get(on: req.db).map { interests in
+            interests.map { InterestResponse(from: $0) }
+        }
     }
     
     fileprivate func retrieveUser(_ req: Request, userID: User.IDValue) throws -> EventLoopFuture<UserResponse> {
