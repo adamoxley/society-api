@@ -2,17 +2,14 @@ import Vapor
 import Fluent
 
 protocol UserTokenRepository: Repository {
-    func create(_ token: UserToken) -> EventLoopFuture<Void>
     func delete(value: String) -> EventLoopFuture<Void>
     func find(value: String) -> EventLoopFuture<UserToken?>
 }
 
 struct DatabaseUserTokenRepository: UserTokenRepository, DatabaseRepository {
-    let database: Database
+    typealias DatabaseModel = UserToken
     
-    func create(_ token: UserToken) -> EventLoopFuture<Void> {
-        return token.create(on: database)
-    }
+    let database: Database
     
     func delete(value: String) -> EventLoopFuture<Void> {
         return UserToken.query(on: database)
@@ -29,15 +26,15 @@ struct DatabaseUserTokenRepository: UserTokenRepository, DatabaseRepository {
 
 extension Application.Repositories {
     
-    var tokens: UserTokenRepository {
+    var tokens: DatabaseUserTokenRepository {
         guard let storage = storage.makeUserTokenRepository else {
-            fatalError("UserTokenRepository not configured, use: app.userTokenRepository.use()")
+            fatalError("DatabaseUserTokenRepository not configured, use: app.userTokenRepository.use()")
         }
         
         return storage(app)
     }
     
-    func use(_ make: @escaping (Application) -> (UserTokenRepository)) {
+    func use(_ make: @escaping (Application) -> (DatabaseUserTokenRepository)) {
         storage.makeUserTokenRepository = make
     }
 }
