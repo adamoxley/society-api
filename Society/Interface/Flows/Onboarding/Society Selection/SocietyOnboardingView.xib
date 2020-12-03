@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocietyOnboardingViewController" customModule="Society" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocietyOnboardingViewController" customModule="SocietyCore" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="mqr-Nq-dj0" id="Vul-Pe-WcJ"/>
                 <outlet property="proceedButton" destination="Qe2-y3-z8N" id="2k3-Sl-hS0"/>
@@ -21,16 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CtI-kn-GsX">
-                    <rect key="frame" x="45" y="139" width="226" height="45.5"/>
+                    <rect key="frame" x="45" y="139" width="227" height="45.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join some societies," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpz-7g-Z0M">
-                            <rect key="frame" x="0.0" y="0.0" width="226" height="24"/>
+                            <rect key="frame" x="0.0" y="0.0" width="227" height="24"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                             <color key="textColor" name="primaryGrey"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="we're sure you'll love these" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V60-Gm-v7W">
-                            <rect key="frame" x="0.0" y="24" width="226" height="21.5"/>
+                            <rect key="frame" x="0.0" y="24" width="227" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                             <color key="textColor" name="secondaryGrey"/>
                             <nil key="highlightedColor"/>
@@ -39,8 +39,9 @@
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqr-Nq-dj0">
                     <rect key="frame" x="20" y="214.5" width="374" height="535.5"/>
+                    <color key="backgroundColor" name="destructive"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-y3-z8N">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-y3-z8N">
                     <rect key="frame" x="45" y="780" width="324" height="42"/>
                     <color key="backgroundColor" name="action"/>
                     <constraints>
@@ -57,6 +58,7 @@
                     </constraints>
                 </imageView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="viewBackground"/>
             <constraints>
                 <constraint firstItem="gAg-Z7-aKt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="58Q-Bu-0NN"/>
@@ -75,7 +77,6 @@
                 </constraint>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qe2-y3-z8N" secondAttribute="trailing" constant="45" id="z7x-1M-ugK"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
@@ -83,6 +84,9 @@
         <image name="society_logo" width="81" height="27"/>
         <namedColor name="action">
             <color red="0.098039215686274508" green="0.47058823529411764" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="destructive">
+            <color red="0.38823529411764707" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryGrey">
             <color red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

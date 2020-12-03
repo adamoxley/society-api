@@ -34,7 +34,7 @@ class SocietyListCellViewModel: ViewModel {
     
     var imageURL: URL {
         guard let imageURL = model.imageURL else {
-            return URL(fileReferenceLiteralResourceName: "iPad")
+            return URL(fileURLWithPath: "iPad")
         }
         
         return imageURL

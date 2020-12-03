@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocietyListViewController" customModule="Society" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocietyListViewController" customModule="SocietyCore" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="ctd-Tp-ACo" id="YH3-a9-CLg"/>
                 <outlet property="collectionView" destination="GTY-yZ-Urp" id="5zl-vv-mrr"/>
@@ -34,7 +34,7 @@
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ctd-Tp-ACo">
                     <rect key="frame" x="197" y="438" width="20" height="20"/>
                 </activityIndicatorView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDr-ZY-zrY">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDr-ZY-zrY">
                     <rect key="frame" x="62.5" y="433.5" width="289" height="29"/>
                     <state key="normal">
                         <attributedString key="attributedTitle">
@@ -63,6 +63,7 @@
                     </connections>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="viewBackground"/>
             <constraints>
                 <constraint firstItem="GTY-yZ-Urp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8Oo-uD-90A"/>
@@ -74,7 +75,6 @@
                 <constraint firstItem="WDr-ZY-zrY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wvG-tO-O5k"/>
                 <constraint firstItem="WDr-ZY-zrY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xwO-7L-aaJ"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
